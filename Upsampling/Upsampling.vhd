@@ -3,8 +3,10 @@ use IEEE.std_logic_1164.all;
 
 ENTITY Upsampling IS
 	PORT( 
-		clk 				: in STD_LOGIC;
-		saida 			: out STD_LOGIC 
+		sampleIn						: in STD_LOGIC_VECTOR (7 DOWNTO 0);
+		clk, start, reset				: in STD_LOGIC;
+		newLine, valido					: out STD_LOGIC;
+		sampleOut1, sampleOut2			: out STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END Upsampling;
 
@@ -44,22 +46,25 @@ architecture behavioral of Upsampling is
 	END COMPONENT;
 	
 	signal auxAddress 												: STD_LOGIC_VECTOR (9 DOWNTO 0);
-	signal writeEnable, start, auxTrocaLinha, 
+	signal auxWriteEnable, auxInicio, auxTrocaLinha, stop,
 	auxInicioImagem, auxValido										: STD_LOGIC;
 	signal amostraMemory, result1, result2						: STD_LOGIC_VECTOR (7 DOWNTO 0);
 	signal auxIn0, auxIn1, auxIn2, auxIn3, auxIn4, auxIn5	: STD_LOGIC_VECTOR (7 DOWNTO 0);
+
+	TYPE STATE_TYPE IS (estadoParado, estadoProcessando);
+	SIGNAL estado_atual, proximo_estado: STATE_TYPE;
 
 begin
 
 	RegBank : Memory
 		PORT MAP (
-			address => auxAddress, clock => clk, data => "00000000", -- da onde vem o dado?
-			wren => writeEnable, q => amostraMemory
+			address => auxAddress, clock => clk, data => sampleIn,
+			wren => auxWriteEnable, q => amostraMemory
 		);
 
 	Interpolador1 : Interpolador
 		PORT MAP (
-			clock => clk, inicio => start, amostraIN0 => auxIn0, amostraIN1 => auxIn1, 
+			clock => clk, inicio => auxInicio, amostraIN0 => auxIn0, amostraIN1 => auxIn1, 
 			amostraIN2 => auxIn2, amostraIN3 => auxIn3, amostraIN4 => auxIn4, amostraIN5 => auxIn5,
 			amostraOUT => result1, amostraOUT2 => result2, endereco => auxAddress,
 			trocaLinha => auxTrocaLinha, inicioImagem => auxInicioImagem, valido => auxValido
@@ -71,11 +76,46 @@ begin
 			saida2 => auxIn2, saida3 => auxIn3, saida4 => auxIn4, saida5 => auxIn5
 		);
 
-	process (clk)
-	begin
-		if (clk = '1' and clk'event) then
 
+	process (reset, clk)
+	begin
+		if (reset = '1') then
+			estado_atual <= estadoParado;
+		elsif (clk'EVENT and clk = '1') then
+			estado_atual <= proximo_estado;
 		end if;
+	end process;
+	
+	process (estado_atual, clk)
+	begin
+		case estado_atual is
+			when estadoParado =>
+				sampleOut1 <= "00000000";
+				sampleOut2 <= "00000000";
+				valido <= '0';
+				newLine <= '0';
+				if start = '1' then
+					proximo_estado <= estadoProcessando;
+				else
+					proximo_estado <= estadoParado;
+				end if;
+			when estadoProcessando =>
+				sampleOut1 <= result1;
+				sampleOut2 <= result2;
+				valido <= auxValido;
+				newLine <= auxTrocaLinha;
+				auxWriteEnable <= '1';
+				--if (auxTrocaLinha = '1') then
+				--	auxWriteEnable <= '1';
+				--else
+				--	auxWriteEnable <= '0';
+				--end if;
+				if auxInicioImagem = '1' then
+					proximo_estado <= estadoParado;
+				else
+					proximo_estado <= estadoProcessando;
+				end if;
+		end case;
 	end process;
 	
 end behavioral;

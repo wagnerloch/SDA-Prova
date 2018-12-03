@@ -26,8 +26,8 @@ architecture behavioral of Interpolador is
 begin
 
 	process(clock, inicio)
-		variable auxTrocaLinha: integer range 0 to 5;
-		variable auxInicioImagem: integer range 0 to 5 := 5;
+		variable auxTrocaLinha: integer range 0 to 511;
+		variable auxInicioImagem: integer range 0 to 511 := 511;
 	begin
 		if (clock = '1' and clock'event) then
 			if(inicio = '1') then
@@ -39,9 +39,9 @@ begin
 			valido <= '0';
 			endereco <= auxEndereco;
 			if (processing = '1') then
-				if (auxInicioImagem /= 5) then
+				if (auxInicioImagem /= 511) then
 					auxTrocaLinha := auxTrocaLinha + 1;
-					if (auxTrocaLinha = 5) then 
+					if (auxTrocaLinha = 511) then 
 						auxInicioImagem := auxInicioImagem + 1;
 						trocaLinha <= '1';
 						auxTrocaLinha := 0;	
@@ -60,8 +60,10 @@ begin
 				else
 					valido <= '1';
 					inicioImagem <= '1';
-					auxEndereco <= "0000000000";
 					processing <= '0';
+					if (auxEndereco = "11111111") then
+						auxEndereco <= "0000000000";
+					end if;
 				end if;
 			end if;
 		end if;
