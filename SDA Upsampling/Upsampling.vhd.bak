@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity Upsampling is
+	port( clk : 		in bit;
+			saida : 		out bit );
+end Upsampling;
+
+architecture behavioral of Upsampling is
+
+	COMPONENT Memory IS
+		PORT(
+			address			: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+			clock			: IN STD_LOGIC  := '1';
+			data			: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			wren			: IN STD_LOGIC ;
+			q				: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT Interpolador IS
+		PORT(
+			clock, inicio  						:	in STD_LOGIC;
+			amostraIN0							:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
+			amostraIN1							:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
+			amostraIN2							:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
+			amostraIN3							:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
+			amostraIN4							:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
+			amostraIN5							:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
+			amostraOUT, amostraOUT2				:	out STD_LOGIC_VECTOR (7 DOWNTO 0);
+			endereco							:	out STD_LOGIC_VECTOR (9 DOWNTO 0);
+			trocaLinha, inicioImagem, valido	:	out STD_LOGIC 
+		);
+	END COMPONENT;
+	
+begin
+
+	
+	
+end behavioral;
