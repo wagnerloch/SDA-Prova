@@ -66,38 +66,38 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
 VCCIO2                       : A2        : power  :                   : 3.3V    : 2         :                
-endereco[3]                  : A3        : output : 3.3-V LVTTL       :         : 2         : N              
-valido                       : A4        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A3        :        :                   :         : 2         :                
+GND*                         : A4        :        :                   :         : 2         :                
 GND*                         : A5        :        :                   :         : 2         :                
 GND*                         : A6        :        :                   :         : 2         :                
 GND*                         : A7        :        :                   :         : 2         :                
 GND*                         : A8        :        :                   :         : 2         :                
-GND*                         : A9        :        :                   :         : 2         :                
-amostraOUT[3]                : A10       : output : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[2]                : A11       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[3]                : A12       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN5[1]                : A13       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN3[5]                : A14       : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[4]                : A9        : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[2]                : A10       : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraOUT2[7]               : A11       : output : 3.3-V LVTTL       :         : 2         : N              
+amostraIN5[7]                : A12       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A13       :        :                   :         : 2         :                
+GND*                         : A14       :        :                   :         : 2         :                
 VCCIO2                       : A15       : power  :                   : 3.3V    : 2         :                
 GND                          : A16       : gnd    :                   :         :           :                
 VCCIO1                       : B1        : power  :                   : 3.3V    : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
-endereco[0]                  : B3        : output : 3.3-V LVTTL       :         : 2         : N              
-trocaLinha                   : B4        : output : 3.3-V LVTTL       :         : 2         : N              
-inicioImagem                 : B5        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B3        :        :                   :         : 2         :                
+GND*                         : B4        :        :                   :         : 2         :                
+GND*                         : B5        :        :                   :         : 2         :                
 GND*                         : B6        :        :                   :         : 2         :                
 GND*                         : B7        :        :                   :         : 2         :                
 NC                           : B8        :        :                   :         :           :                
-amostraIN5[4]                : B9        : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraOUT[0]                : B10       : output : 3.3-V LVTTL       :         : 2         : N              
-amostraIN5[5]                : B11       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[0]                : B12       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN5[7]                : B13       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[5]                : B14       : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[6]                : B9        : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[1]                : B10       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B11       :        :                   :         : 2         :                
+amostraIN5[0]                : B12       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B13       :        :                   :         : 2         :                
+GND*                         : B14       :        :                   :         : 2         :                
 GND                          : B15       : gnd    :                   :         :           :                
 VCCIO3                       : B16       : power  :                   : 3.3V    : 3         :                
-endereco[1]                  : C1        : output : 3.3-V LVTTL       :         : 1         : N              
-endereco[4]                  : C2        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : C1        :        :                   :         : 1         :                
+GND*                         : C2        :        :                   :         : 1         :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : C4        :        :                   :         : 2         :                
 GND*                         : C5        :        :                   :         : 2         :                
@@ -106,34 +106,34 @@ VCCIO2                       : C7        : power  :                   : 3.3V    
 GND                          : C8        : gnd    :                   :         :           :                
 GND                          : C9        : gnd    :                   :         :           :                
 VCCIO2                       : C10       : power  :                   : 3.3V    : 2         :                
-amostraOUT2[0]               : C11       : output : 3.3-V LVTTL       :         : 2         : N              
-amostraIN5[2]                : C12       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[6]                : C13       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[4]                : C14       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[0]                : C11       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : C12       :        :                   :         : 2         :                
+GND*                         : C13       :        :                   :         : 2         :                
+GND*                         : C14       :        :                   :         : 3         :                
 NC                           : C15       :        :                   :         :           :                
 NC                           : C16       :        :                   :         :           :                
 NC                           : D1        :        :                   :         :           :                
 NC                           : D2        :        :                   :         :           :                
-endereco[6]                  : D3        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : D3        :        :                   :         : 1         :                
 GND*                         : D4        :        :                   :         : 1         :                
-endereco[2]                  : D5        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : D5        :        :                   :         : 1         :                
 GND*                         : D6        :        :                   :         : 2         :                
 NC                           : D7        :        :                   :         :           :                
 GND*                         : D8        :        :                   :         : 2         :                
 NC                           : D9        :        :                   :         :           :                
-GND*                         : D10       :        :                   :         : 2         :                
-amostraOUT2[2]               : D11       : output : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[7]                : D10       : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraOUT2[4]               : D11       : output : 3.3-V LVTTL       :         : 2         : N              
 GND_PLL2                     : D12       : gnd    :                   :         :           :                
-amostraIN1[2]                : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraOUT[1]                : D14       : output : 3.3-V LVTTL       :         : 3         : N              
-amostraIN0[3]                : D15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN1[7]                : D16       : input  : 3.3-V LVTTL       :         : 3         : N              
-inicio                       : E1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : D13       :        :                   :         : 3         :                
+GND*                         : D14       :        :                   :         : 3         :                
+amostraOUT2[5]               : D15       : output : 3.3-V LVTTL       :         : 3         : N              
+amostraIN5[1]                : D16       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : E1        :        :                   :         : 1         :                
 GND*                         : E2        :        :                   :         : 1         :                
-endereco[7]                  : E3        : output : 3.3-V LVTTL       :         : 1         : N              
-endereco[5]                  : E4        : output : 3.3-V LVTTL       :         : 1         : N              
-endereco[8]                  : E5        : output : 3.3-V LVTTL       :         : 1         : N              
-amostraOUT2[7]               : E6        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E3        :        :                   :         : 1         :                
+GND*                         : E4        :        :                   :         : 1         :                
+GND*                         : E5        :        :                   :         : 1         :                
+GND*                         : E6        :        :                   :         : 2         :                
 VCCIO2                       : E7        : power  :                   : 3.3V    : 2         :                
 GND                          : E8        : gnd    :                   :         :           :                
 GND                          : E9        : gnd    :                   :         :           :                
@@ -141,25 +141,25 @@ VCCIO2                       : E10       : power  :                   : 3.3V    
 GNDA_PLL2                    : E11       : gnd    :                   :         :           :                
 VCCA_PLL2                    : E12       : power  :                   : 1.2V    :           :                
 NC                           : E13       :        :                   :         :           :                
-amostraIN1[4]                : E14       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : E14       :        :                   :         : 3         :                
 NC                           : E15       :        :                   :         :           :                
-amostraIN1[5]                : E16       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : E16       :        :                   :         : 3         :                
 DATA0                        : F1        : input  :                   :         : 1         :                
 TCK                          : F2        : input  :                   :         : 1         :                
 GND*                         : F3        :        :                   :         : 1         :                
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 3.3-V LVTTL       :         : 1         : N              
 NC                           : F5        :        :                   :         :           :                
-endereco[9]                  : F6        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F6        :        :                   :         : 2         :                
 GND*                         : F7        :        :                   :         : 2         :                
 GND*                         : F8        :        :                   :         : 2         :                
-amostraIN5[6]                : F9        : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN4[1]                : F10       : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[0]                : F9        : input  : 3.3-V LVTTL       :         : 2         : N              
+amostraIN3[5]                : F10       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCD_PLL2                    : F11       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : F12       : gnd    :                   :         :           :                
 NC                           : F13       :        :                   :         :           :                
 NC                           : F14       :        :                   :         :           :                
-amostraIN3[1]                : F15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN0[1]                : F16       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[1]                : F15       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraOUT2[3]               : F16       : output : 3.3-V LVTTL       :         : 3         : N              
 TMS                          : G1        : input  :                   :         : 1         :                
 TDO                          : G2        : output :                   :         : 1         :                
 VCCIO1                       : G3        : power  :                   : 3.3V    : 1         :                
@@ -169,13 +169,13 @@ GND*                         : G6        :        :                   :         
 GND*                         : G7        :        :                   :         : 2         :                
 GND                          : G8        : gnd    :                   :         :           :                
 VCCINT                       : G9        : power  :                   : 1.2V    :           :                
-amostraOUT2[1]               : G10       : output : 3.3-V LVTTL       :         : 2         : N              
-amostraIN5[0]                : G11       : input  : 3.3-V LVTTL       :         : 2         : N              
-amostraIN1[3]                : G12       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN0[0]                : G13       : input  : 3.3-V LVTTL       :         : 3         : N              
+valido                       : G10       : output : 3.3-V LVTTL       :         : 2         : N              
+amostraOUT[2]                : G11       : output : 3.3-V LVTTL       :         : 2         : N              
+amostraIN4[7]                : G12       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[4]                : G13       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : G14       : power  :                   : 3.3V    : 3         :                
-amostraIN3[3]                : G15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN3[4]                : G16       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraOUT2[6]               : G15       : output : 3.3-V LVTTL       :         : 3         : N              
+amostraIN5[3]                : G16       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : H1        :        :                   :         : 1         :                
 clock                        : H2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : H3        : gnd    :                   :         :           :                
@@ -186,9 +186,9 @@ VCCINT                       : H7        : power  :                   : 1.2V    
 GND                          : H8        : gnd    :                   :         :           :                
 GND                          : H9        : gnd    :                   :         :           :                
 VCCINT                       : H10       : power  :                   : 1.2V    :           :                
-amostraIN1[0]                : H11       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN0[7]                : H12       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN1[1]                : H13       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[2]                : H11       : input  : 3.3-V LVTTL       :         : 3         : N              
+trocaLinha                   : H12       : output : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[5]                : H13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : H14       : gnd    :                   :         :           :                
 GND+                         : H15       :        :                   :         : 3         :                
 GND+                         : H16       :        :                   :         : 3         :                
@@ -202,8 +202,8 @@ VCCINT                       : J7        : power  :                   : 1.2V    
 GND                          : J8        : gnd    :                   :         :           :                
 GND                          : J9        : gnd    :                   :         :           :                
 NC                           : J10       :        :                   :         :           :                
-amostraIN1[6]                : J11       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN3[0]                : J12       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[3]                : J11       : input  : 3.3-V LVTTL       :         : 3         : N              
+inicio                       : J12       : input  : 3.3-V LVTTL       :         : 3         : N              
 MSEL0                        : J13       :        :                   :         : 3         :                
 GND                          : J14       : gnd    :                   :         :           :                
 GND+                         : J15       :        :                   :         : 3         :                
@@ -217,106 +217,106 @@ NC                           : K6        :        :                   :         
 NC                           : K7        :        :                   :         :           :                
 NC                           : K8        :        :                   :         :           :                
 GND                          : K9        : gnd    :                   :         :           :                
-GND*                         : K10       :        :                   :         : 4         :                
-amostraIN3[6]                : K11       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[0]                : K10       : output : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[1]                : K11       : output : 3.3-V LVTTL       :         : 4         : N              
 MSEL1                        : K12       :        :                   :         : 3         :                
 NC                           : K13       :        :                   :         :           :                
 VCCIO3                       : K14       : power  :                   : 3.3V    : 3         :                
-amostraIN0[4]                : K15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN2[0]                : K16       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN5[5]                : K15       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN4[6]                : K16       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : L1        :        :                   :         : 1         :                
 GND*                         : L2        :        :                   :         : 1         :                
 GND*                         : L3        :        :                   :         : 1         :                
-amostraOUT2[5]               : L4        : output : 3.3-V LVTTL       :         : 1         : N              
+endereco[9]                  : L4        : output : 3.3-V LVTTL       :         : 1         : N              
 GND_PLL1                     : L5        : gnd    :                   :         :           :                
 VCCD_PLL1                    : L6        : power  :                   : 1.2V    :           :                
-GND*                         : L7        :        :                   :         : 4         :                
-GND*                         : L8        :        :                   :         : 4         :                
-amostraIN2[6]                : L9        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : L10       :        :                   :         : 4         :                
-GND*                         : L11       :        :                   :         : 4         :                
-amostraIN4[7]                : L12       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN1[6]                : L7        : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN1[4]                : L8        : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[7]                : L9        : output : 3.3-V LVTTL       :         : 4         : N              
+amostraIN1[7]                : L10       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN2[1]                : L11       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN2[6]                : L12       : input  : 3.3-V LVTTL       :         : 4         : N              
 CONF_DONE                    : L13       :        :                   :         : 3         :                
-amostraIN0[5]                : L14       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN0[2]                : L15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN0[6]                : L16       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN5[2]                : L14       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN5[6]                : L15       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN5[4]                : L16       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : M1        :        :                   :         : 1         :                
 GND*                         : M2        :        :                   :         : 1         :                
-GND*                         : M3        :        :                   :         : 1         :                
-GND*                         : M4        :        :                   :         : 1         :                
+endereco[7]                  : M3        : output : 3.3-V LVTTL       :         : 1         : N              
+endereco[2]                  : M4        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCA_PLL1                    : M5        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : M6        : gnd    :                   :         :           :                
 VCCIO4                       : M7        : power  :                   : 3.3V    : 4         :                
 GND                          : M8        : gnd    :                   :         :           :                
 GND                          : M9        : gnd    :                   :         :           :                
 VCCIO4                       : M10       : power  :                   : 3.3V    : 4         :                
-GND*                         : M11       :        :                   :         : 4         :                
+amostraIN2[3]                : M11       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : M12       :        :                   :         : 3         :                
 nSTATUS                      : M13       :        :                   :         : 3         :                
-amostraIN2[1]                : M14       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN2[5]                : M15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraOUT[2]                : M16       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : N1        :        :                   :         : 1         :                
-GND*                         : N2        :        :                   :         : 1         :                
+inicioImagem                 : M14       : output : 3.3-V LVTTL       :         : 3         : N              
+amostraIN2[4]                : M15       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : M16       :        :                   :         : 3         :                
+endereco[4]                  : N1        : output : 3.3-V LVTTL       :         : 1         : N              
+endereco[1]                  : N2        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : N3        :        :                   :         :           :                
 NC                           : N4        :        :                   :         :           :                
 GND_PLL1                     : N5        : gnd    :                   :         :           :                
 NC                           : N6        :        :                   :         :           :                
 NC                           : N7        :        :                   :         :           :                
 GND*                         : N8        :        :                   :         : 4         :                
-amostraIN3[7]                : N9        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : N10       :        :                   :         : 4         :                
-GND*                         : N11       :        :                   :         : 4         :                
-amostraOUT[5]                : N12       : output : 3.3-V LVTTL       :         : 3         : N              
-amostraIN2[4]                : N13       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN1[3]                : N9        : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN1[2]                : N10       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN0[0]                : N11       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : N12       :        :                   :         : 3         :                
+amostraIN2[2]                : N13       : input  : 3.3-V LVTTL       :         : 3         : N              
 ~LVDS41p/nCEO~               : N14       : output : 3.3-V LVTTL       :         : 3         : N              
-amostraIN2[3]                : N15       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraIN2[2]                : N16       : input  : 3.3-V LVTTL       :         : 3         : N              
-amostraOUT2[4]               : P1        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : P2        :        :                   :         : 1         :                
-GND*                         : P3        :        :                   :         : 1         :                
+amostraIN2[0]                : N15       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN0[2]                : N16       : input  : 3.3-V LVTTL       :         : 3         : N              
+endereco[6]                  : P1        : output : 3.3-V LVTTL       :         : 1         : N              
+endereco[5]                  : P2        : output : 3.3-V LVTTL       :         : 1         : N              
+endereco[3]                  : P3        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : P4        :        :                   :         : 4         :                
-GND*                         : P5        :        :                   :         : 4         :                
+endereco[8]                  : P5        : output : 3.3-V LVTTL       :         : 4         : N              
 NC                           : P6        :        :                   :         :           :                
 VCCIO4                       : P7        : power  :                   : 3.3V    : 4         :                
 GND                          : P8        : gnd    :                   :         :           :                
 GND                          : P9        : gnd    :                   :         :           :                
 VCCIO4                       : P10       : power  :                   : 3.3V    : 4         :                
-GND*                         : P11       :        :                   :         : 4         :                
-GND*                         : P12       :        :                   :         : 4         :                
-GND*                         : P13       :        :                   :         : 4         :                
-amostraOUT[4]                : P14       : output : 3.3-V LVTTL       :         : 3         : N              
-amostraOUT[7]                : P15       : output : 3.3-V LVTTL       :         : 3         : N              
-amostraOUT[6]                : P16       : output : 3.3-V LVTTL       :         : 3         : N              
+amostraIN1[5]                : P11       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN0[3]                : P12       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN0[4]                : P13       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN1[1]                : P14       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN1[0]                : P15       : input  : 3.3-V LVTTL       :         : 3         : N              
+amostraIN0[5]                : P16       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO1                       : R1        : power  :                   : 3.3V    : 1         :                
 GND                          : R2        : gnd    :                   :         :           :                
 GND*                         : R3        :        :                   :         : 4         :                
 GND*                         : R4        :        :                   :         : 4         :                
 GND*                         : R5        :        :                   :         : 4         :                
 NC                           : R6        :        :                   :         :           :                
-GND*                         : R7        :        :                   :         : 4         :                
-amostraOUT2[6]               : R8        : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : R9        :        :                   :         : 4         :                
-GND*                         : R10       :        :                   :         : 4         :                
-GND*                         : R11       :        :                   :         : 4         :                
-GND*                         : R12       :        :                   :         : 4         :                
-amostraIN5[3]                : R13       : input  : 3.3-V LVTTL       :         : 4         : N              
-amostraIN3[2]                : R14       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[5]                : R7        : output : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[4]                : R8        : output : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[6]                : R9        : output : 3.3-V LVTTL       :         : 4         : N              
+amostraIN3[3]                : R10       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT2[1]               : R11       : output : 3.3-V LVTTL       :         : 4         : N              
+amostraIN0[6]                : R12       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN2[7]                : R13       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : R14       :        :                   :         : 4         :                
 GND                          : R15       : gnd    :                   :         :           :                
 VCCIO3                       : R16       : power  :                   : 3.3V    : 3         :                
 GND                          : T1        : gnd    :                   :         :           :                
 VCCIO4                       : T2        : power  :                   : 3.3V    : 4         :                
-GND*                         : T3        :        :                   :         : 4         :                
+endereco[0]                  : T3        : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : T4        :        :                   :         : 4         :                
 GND*                         : T5        :        :                   :         : 4         :                
 GND*                         : T6        :        :                   :         : 4         :                
 GND*                         : T7        :        :                   :         : 4         :                
-GND*                         : T8        :        :                   :         : 4         :                
-amostraIN2[7]                : T9        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : T10       :        :                   :         : 4         :                
-GND*                         : T11       :        :                   :         : 4         :                
-GND*                         : T12       :        :                   :         : 4         :                
-GND*                         : T13       :        :                   :         : 4         :                
-amostraOUT2[3]               : T14       : output : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT2[2]               : T8        : output : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT2[0]               : T9        : output : 3.3-V LVTTL       :         : 4         : N              
+amostraIN0[1]                : T10       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraOUT[3]                : T11       : output : 3.3-V LVTTL       :         : 4         : N              
+amostraIN0[7]                : T12       : input  : 3.3-V LVTTL       :         : 4         : N              
+amostraIN2[5]                : T13       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : T14       :        :                   :         : 4         :                
 VCCIO4                       : T15       : power  :                   : 3.3V    : 4         :                
 GND                          : T16       : gnd    :                   :         :           :                

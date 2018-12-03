@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/03/2018 01:35:20"
+// Generated on "12/03/2018 15:33:12"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Interpolador
 // 
@@ -72,7 +72,7 @@ module Interpolador_vlg_check_tst (
 	amostraOUT,
 	amostraOUT2,
 	endereco,
-	incioImagem,
+	inicioImagem,
 	trocaLinha,
 	valido,
 	sampler_rx
@@ -80,7 +80,7 @@ module Interpolador_vlg_check_tst (
 input [7:0] amostraOUT;
 input [7:0] amostraOUT2;
 input [9:0] endereco;
-input  incioImagem;
+input  inicioImagem;
 input  trocaLinha;
 input  valido;
 input sampler_rx;
@@ -88,28 +88,26 @@ input sampler_rx;
 reg [7:0] amostraOUT_expected;
 reg [7:0] amostraOUT2_expected;
 reg [9:0] endereco_expected;
-reg  incioImagem_expected;
+reg  inicioImagem_expected;
 reg  trocaLinha_expected;
 reg  valido_expected;
 
 reg [7:0] amostraOUT_prev;
 reg [7:0] amostraOUT2_prev;
 reg [9:0] endereco_prev;
-reg  incioImagem_prev;
+reg  inicioImagem_prev;
 reg  trocaLinha_prev;
 reg  valido_prev;
 
 reg [7:0] amostraOUT_expected_prev;
 reg [7:0] amostraOUT2_expected_prev;
 reg [9:0] endereco_expected_prev;
-reg  incioImagem_expected_prev;
 reg  trocaLinha_expected_prev;
 reg  valido_expected_prev;
 
 reg [7:0] last_amostraOUT_exp;
 reg [7:0] last_amostraOUT2_exp;
 reg [9:0] last_endereco_exp;
-reg  last_incioImagem_exp;
 reg  last_trocaLinha_exp;
 reg  last_valido_exp;
 
@@ -136,7 +134,7 @@ begin
 	amostraOUT_prev = amostraOUT;
 	amostraOUT2_prev = amostraOUT2;
 	endereco_prev = endereco;
-	incioImagem_prev = incioImagem;
+	inicioImagem_prev = inicioImagem;
 	trocaLinha_prev = trocaLinha;
 	valido_prev = valido;
 end
@@ -148,7 +146,6 @@ begin
 	amostraOUT_expected_prev = amostraOUT_expected;
 	amostraOUT2_expected_prev = amostraOUT2_expected;
 	endereco_expected_prev = endereco_expected;
-	incioImagem_expected_prev = incioImagem_expected;
 	trocaLinha_expected_prev = trocaLinha_expected;
 	valido_expected_prev = valido_expected;
 end
@@ -157,82 +154,108 @@ end
 // expected amostraOUT[ 7 ]
 initial
 begin
-	amostraOUT_expected[7] = 1'bX;
+	amostraOUT_expected[7] = 1'b0;
+	amostraOUT_expected[7] = #600000 1'b1;
+	amostraOUT_expected[7] = #80000 1'bX;
 end 
 // expected amostraOUT[ 6 ]
 initial
 begin
-	amostraOUT_expected[6] = 1'bX;
+	amostraOUT_expected[6] = 1'b0;
+	amostraOUT_expected[6] = #600000 1'b1;
+	amostraOUT_expected[6] = #80000 1'bX;
 end 
 // expected amostraOUT[ 5 ]
 initial
 begin
-	amostraOUT_expected[5] = 1'bX;
+	amostraOUT_expected[5] = 1'b0;
+	amostraOUT_expected[5] = #600000 1'b1;
+	amostraOUT_expected[5] = #80000 1'bX;
 end 
 // expected amostraOUT[ 4 ]
 initial
 begin
-	amostraOUT_expected[4] = 1'bX;
+	amostraOUT_expected[4] = 1'b0;
+	amostraOUT_expected[4] = #680000 1'bX;
 end 
 // expected amostraOUT[ 3 ]
 initial
 begin
-	amostraOUT_expected[3] = 1'bX;
+	amostraOUT_expected[3] = 1'b0;
+	amostraOUT_expected[3] = #520000 1'b1;
+	amostraOUT_expected[3] = #160000 1'bX;
 end 
 // expected amostraOUT[ 2 ]
 initial
 begin
-	amostraOUT_expected[2] = 1'bX;
+	amostraOUT_expected[2] = 1'b0;
+	amostraOUT_expected[2] = #680000 1'bX;
 end 
 // expected amostraOUT[ 1 ]
 initial
 begin
-	amostraOUT_expected[1] = 1'bX;
+	amostraOUT_expected[1] = 1'b0;
+	amostraOUT_expected[1] = #680000 1'bX;
 end 
 // expected amostraOUT[ 0 ]
 initial
 begin
-	amostraOUT_expected[0] = 1'bX;
+	amostraOUT_expected[0] = 1'b0;
+	amostraOUT_expected[0] = #600000 1'b1;
+	amostraOUT_expected[0] = #80000 1'bX;
 end 
 // expected amostraOUT2[ 7 ]
 initial
 begin
-	amostraOUT2_expected[7] = 1'bX;
+	amostraOUT2_expected[7] = 1'b0;
+	amostraOUT2_expected[7] = #680000 1'b1;
+	amostraOUT2_expected[7] = #80000 1'bX;
 end 
 // expected amostraOUT2[ 6 ]
 initial
 begin
-	amostraOUT2_expected[6] = 1'bX;
+	amostraOUT2_expected[6] = 1'b0;
+	amostraOUT2_expected[6] = #680000 1'b1;
+	amostraOUT2_expected[6] = #80000 1'bX;
 end 
 // expected amostraOUT2[ 5 ]
 initial
 begin
-	amostraOUT2_expected[5] = 1'bX;
+	amostraOUT2_expected[5] = 1'b0;
+	amostraOUT2_expected[5] = #680000 1'b1;
+	amostraOUT2_expected[5] = #80000 1'bX;
 end 
 // expected amostraOUT2[ 4 ]
 initial
 begin
-	amostraOUT2_expected[4] = 1'bX;
+	amostraOUT2_expected[4] = 1'b0;
+	amostraOUT2_expected[4] = #760000 1'bX;
 end 
 // expected amostraOUT2[ 3 ]
 initial
 begin
-	amostraOUT2_expected[3] = 1'bX;
+	amostraOUT2_expected[3] = 1'b0;
+	amostraOUT2_expected[3] = #600000 1'b1;
+	amostraOUT2_expected[3] = #160000 1'bX;
 end 
 // expected amostraOUT2[ 2 ]
 initial
 begin
-	amostraOUT2_expected[2] = 1'bX;
+	amostraOUT2_expected[2] = 1'b0;
+	amostraOUT2_expected[2] = #760000 1'bX;
 end 
 // expected amostraOUT2[ 1 ]
 initial
 begin
-	amostraOUT2_expected[1] = 1'bX;
+	amostraOUT2_expected[1] = 1'b0;
+	amostraOUT2_expected[1] = #760000 1'bX;
 end 
 // expected amostraOUT2[ 0 ]
 initial
 begin
-	amostraOUT2_expected[0] = 1'bX;
+	amostraOUT2_expected[0] = 1'b0;
+	amostraOUT2_expected[0] = #680000 1'b1;
+	amostraOUT2_expected[0] = #80000 1'bX;
 end 
 // expected endereco[ 9 ]
 initial
@@ -285,12 +308,6 @@ begin
 	endereco_expected[0] = 1'bX;
 end 
 
-// expected incioImagem
-initial
-begin
-	incioImagem_expected = 1'bX;
-end 
-
 // expected trocaLinha
 initial
 begin
@@ -303,7 +320,7 @@ begin
 	valido_expected = 1'bX;
 end 
 // generate trigger
-always @(amostraOUT_expected or amostraOUT or amostraOUT2_expected or amostraOUT2 or endereco_expected or endereco or incioImagem_expected or incioImagem or trocaLinha_expected or trocaLinha or valido_expected or valido)
+always @(amostraOUT_expected or amostraOUT or amostraOUT2_expected or amostraOUT2 or endereco_expected or endereco or inicioImagem_expected or inicioImagem or trocaLinha_expected or trocaLinha or valido_expected or valido)
 begin
 	trigger <= ~trigger;
 end
@@ -313,8 +330,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected amostraOUT = %b | expected amostraOUT2 = %b | expected endereco = %b | expected incioImagem = %b | expected trocaLinha = %b | expected valido = %b | ",amostraOUT_expected_prev,amostraOUT2_expected_prev,endereco_expected_prev,incioImagem_expected_prev,trocaLinha_expected_prev,valido_expected_prev);
-	$display("| real amostraOUT = %b | real amostraOUT2 = %b | real endereco = %b | real incioImagem = %b | real trocaLinha = %b | real valido = %b | ",amostraOUT_prev,amostraOUT2_prev,endereco_prev,incioImagem_prev,trocaLinha_prev,valido_prev);
+	$display("| expected amostraOUT = %b | expected amostraOUT2 = %b | expected endereco = %b | expected inicioImagem = %b | expected trocaLinha = %b | expected valido = %b | ",amostraOUT_expected_prev,amostraOUT2_expected_prev,endereco_expected_prev,inicioImagem_expected_prev,trocaLinha_expected_prev,valido_expected_prev);
+	$display("| real amostraOUT = %b | real amostraOUT2 = %b | real endereco = %b | real inicioImagem = %b | real trocaLinha = %b | real valido = %b | ",amostraOUT_prev,amostraOUT2_prev,endereco_prev,inicioImagem_prev,trocaLinha_prev,valido_prev);
 `endif
 	if (
 		( amostraOUT_expected_prev[0] !== 1'bx ) && ( amostraOUT_prev[0] !== amostraOUT_expected_prev[0] )
@@ -655,19 +672,6 @@ begin
 		last_endereco_exp[9] = endereco_expected_prev[9];
 	end
 	if (
-		( incioImagem_expected_prev !== 1'bx ) && ( incioImagem_prev !== incioImagem_expected_prev )
-		&& ((incioImagem_expected_prev !== last_incioImagem_exp) ||
-			on_first_change[4])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port incioImagem :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", incioImagem_expected_prev);
-		$display ("     Real value = %b", incioImagem_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[4] = 1'b0;
-		last_incioImagem_exp = incioImagem_expected_prev;
-	end
-	if (
 		( trocaLinha_expected_prev !== 1'bx ) && ( trocaLinha_prev !== trocaLinha_expected_prev )
 		&& ((trocaLinha_expected_prev !== last_trocaLinha_exp) ||
 			on_first_change[5])
@@ -724,7 +728,7 @@ reg inicio;
 wire [7:0] amostraOUT;
 wire [7:0] amostraOUT2;
 wire [9:0] endereco;
-wire incioImagem;
+wire inicioImagem;
 wire trocaLinha;
 wire valido;
 
@@ -743,8 +747,8 @@ Interpolador i1 (
 	.amostraOUT2(amostraOUT2),
 	.clock(clock),
 	.endereco(endereco),
-	.incioImagem(incioImagem),
 	.inicio(inicio),
+	.inicioImagem(inicioImagem),
 	.trocaLinha(trocaLinha),
 	.valido(valido)
 );
@@ -752,106 +756,158 @@ Interpolador i1 (
 initial
 begin
 	amostraIN0[7] = 1'b0;
+	amostraIN0[7] = #100000 1'b1;
+	amostraIN0[7] = #260000 1'b0;
 end 
 // amostraIN0[ 6 ]
 initial
 begin
 	amostraIN0[6] = 1'b0;
+	amostraIN0[6] = #100000 1'b1;
+	amostraIN0[6] = #260000 1'b0;
 end 
 // amostraIN0[ 5 ]
 initial
 begin
 	amostraIN0[5] = 1'b0;
+	amostraIN0[5] = #100000 1'b1;
+	amostraIN0[5] = #180000 1'b0;
 end 
 // amostraIN0[ 4 ]
 initial
 begin
 	amostraIN0[4] = 1'b0;
+	amostraIN0[4] = #200000 1'b1;
+	amostraIN0[4] = #80000 1'b0;
 end 
 // amostraIN0[ 3 ]
 initial
 begin
 	amostraIN0[3] = 1'b1;
+	amostraIN0[3] = #200000 1'b0;
+	amostraIN0[3] = #80000 1'b1;
+	amostraIN0[3] = #80000 1'b0;
+	amostraIN0[3] = #80000 1'b1;
 end 
 // amostraIN0[ 2 ]
 initial
 begin
 	amostraIN0[2] = 1'b0;
+	amostraIN0[2] = #280000 1'b1;
+	amostraIN0[2] = #160000 1'b0;
 end 
 // amostraIN0[ 1 ]
 initial
 begin
-	amostraIN0[1] = 1'b1;
+	amostraIN0[1] = 1'b0;
+	amostraIN0[1] = #200000 1'b1;
+	amostraIN0[1] = #80000 1'b0;
+	amostraIN0[1] = #80000 1'b1;
+	amostraIN0[1] = #80000 1'b0;
 end 
 // amostraIN0[ 0 ]
 initial
 begin
 	amostraIN0[0] = 1'b0;
+	amostraIN0[0] = #100000 1'b1;
+	amostraIN0[0] = #180000 1'b0;
+	amostraIN0[0] = #80000 1'b1;
+	amostraIN0[0] = #80000 1'b0;
 end 
 // amostraIN1[ 7 ]
 initial
 begin
 	amostraIN1[7] = 1'b0;
+	amostraIN1[7] = #200000 1'b1;
+	amostraIN1[7] = #240000 1'b0;
 end 
 // amostraIN1[ 6 ]
 initial
 begin
 	amostraIN1[6] = 1'b0;
+	amostraIN1[6] = #200000 1'b1;
+	amostraIN1[6] = #240000 1'b0;
 end 
 // amostraIN1[ 5 ]
 initial
 begin
 	amostraIN1[5] = 1'b0;
+	amostraIN1[5] = #200000 1'b1;
+	amostraIN1[5] = #160000 1'b0;
 end 
 // amostraIN1[ 4 ]
 initial
 begin
 	amostraIN1[4] = 1'b0;
+	amostraIN1[4] = #280000 1'b1;
+	amostraIN1[4] = #80000 1'b0;
 end 
 // amostraIN1[ 3 ]
 initial
 begin
 	amostraIN1[3] = 1'b0;
+	amostraIN1[3] = #100000 1'b1;
+	amostraIN1[3] = #180000 1'b0;
+	amostraIN1[3] = #80000 1'b1;
+	amostraIN1[3] = #80000 1'b0;
 end 
 // amostraIN1[ 2 ]
 initial
 begin
 	amostraIN1[2] = 1'b0;
+	amostraIN1[2] = #360000 1'b1;
+	amostraIN1[2] = #80000 1'b0;
 end 
 // amostraIN1[ 1 ]
 initial
 begin
 	amostraIN1[1] = 1'b0;
+	amostraIN1[1] = #280000 1'b1;
+	amostraIN1[1] = #80000 1'b0;
+	amostraIN1[1] = #80000 1'b1;
 end 
 // amostraIN1[ 0 ]
 initial
 begin
 	amostraIN1[0] = 1'b0;
+	amostraIN1[0] = #200000 1'b1;
+	amostraIN1[0] = #160000 1'b0;
+	amostraIN1[0] = #80000 1'b1;
 end 
 // amostraIN2[ 7 ]
 initial
 begin
 	amostraIN2[7] = 1'b0;
+	amostraIN2[7] = #280000 1'b1;
+	amostraIN2[7] = #160000 1'b0;
 end 
 // amostraIN2[ 6 ]
 initial
 begin
 	amostraIN2[6] = 1'b0;
+	amostraIN2[6] = #280000 1'b1;
+	amostraIN2[6] = #160000 1'b0;
 end 
 // amostraIN2[ 5 ]
 initial
 begin
 	amostraIN2[5] = 1'b0;
+	amostraIN2[5] = #280000 1'b1;
+	amostraIN2[5] = #160000 1'b0;
 end 
 // amostraIN2[ 4 ]
 initial
 begin
 	amostraIN2[4] = 1'b0;
+	amostraIN2[4] = #360000 1'b1;
+	amostraIN2[4] = #80000 1'b0;
 end 
 // amostraIN2[ 3 ]
 initial
 begin
 	amostraIN2[3] = 1'b0;
+	amostraIN2[3] = #200000 1'b1;
+	amostraIN2[3] = #160000 1'b0;
 end 
 // amostraIN2[ 2 ]
 initial
@@ -862,36 +918,48 @@ end
 initial
 begin
 	amostraIN2[1] = 1'b0;
+	amostraIN2[1] = #360000 1'b1;
 end 
 // amostraIN2[ 0 ]
 initial
 begin
 	amostraIN2[0] = 1'b0;
+	amostraIN2[0] = #280000 1'b1;
 end 
 // amostraIN3[ 7 ]
 initial
 begin
 	amostraIN3[7] = 1'b0;
+	amostraIN3[7] = #360000 1'b1;
+	amostraIN3[7] = #160000 1'b0;
 end 
 // amostraIN3[ 6 ]
 initial
 begin
 	amostraIN3[6] = 1'b0;
+	amostraIN3[6] = #360000 1'b1;
+	amostraIN3[6] = #160000 1'b0;
 end 
 // amostraIN3[ 5 ]
 initial
 begin
 	amostraIN3[5] = 1'b0;
+	amostraIN3[5] = #360000 1'b1;
+	amostraIN3[5] = #160000 1'b0;
 end 
 // amostraIN3[ 4 ]
 initial
 begin
 	amostraIN3[4] = 1'b0;
+	amostraIN3[4] = #440000 1'b1;
+	amostraIN3[4] = #80000 1'b0;
 end 
 // amostraIN3[ 3 ]
 initial
 begin
 	amostraIN3[3] = 1'b0;
+	amostraIN3[3] = #280000 1'b1;
+	amostraIN3[3] = #160000 1'b0;
 end 
 // amostraIN3[ 2 ]
 initial
@@ -902,36 +970,48 @@ end
 initial
 begin
 	amostraIN3[1] = 1'b0;
+	amostraIN3[1] = #440000 1'b1;
 end 
 // amostraIN3[ 0 ]
 initial
 begin
 	amostraIN3[0] = 1'b0;
+	amostraIN3[0] = #360000 1'b1;
 end 
 // amostraIN4[ 7 ]
 initial
 begin
 	amostraIN4[7] = 1'b0;
+	amostraIN4[7] = #440000 1'b1;
+	amostraIN4[7] = #160000 1'b0;
 end 
 // amostraIN4[ 6 ]
 initial
 begin
 	amostraIN4[6] = 1'b0;
+	amostraIN4[6] = #440000 1'b1;
+	amostraIN4[6] = #160000 1'b0;
 end 
 // amostraIN4[ 5 ]
 initial
 begin
 	amostraIN4[5] = 1'b0;
+	amostraIN4[5] = #440000 1'b1;
+	amostraIN4[5] = #160000 1'b0;
 end 
 // amostraIN4[ 4 ]
 initial
 begin
 	amostraIN4[4] = 1'b0;
+	amostraIN4[4] = #520000 1'b1;
+	amostraIN4[4] = #80000 1'b0;
 end 
 // amostraIN4[ 3 ]
 initial
 begin
 	amostraIN4[3] = 1'b0;
+	amostraIN4[3] = #360000 1'b1;
+	amostraIN4[3] = #160000 1'b0;
 end 
 // amostraIN4[ 2 ]
 initial
@@ -942,36 +1022,48 @@ end
 initial
 begin
 	amostraIN4[1] = 1'b0;
+	amostraIN4[1] = #520000 1'b1;
 end 
 // amostraIN4[ 0 ]
 initial
 begin
 	amostraIN4[0] = 1'b0;
+	amostraIN4[0] = #440000 1'b1;
 end 
 // amostraIN5[ 7 ]
 initial
 begin
 	amostraIN5[7] = 1'b0;
+	amostraIN5[7] = #520000 1'b1;
+	amostraIN5[7] = #160000 1'b0;
 end 
 // amostraIN5[ 6 ]
 initial
 begin
 	amostraIN5[6] = 1'b0;
+	amostraIN5[6] = #520000 1'b1;
+	amostraIN5[6] = #160000 1'b0;
 end 
 // amostraIN5[ 5 ]
 initial
 begin
 	amostraIN5[5] = 1'b0;
+	amostraIN5[5] = #520000 1'b1;
+	amostraIN5[5] = #160000 1'b0;
 end 
 // amostraIN5[ 4 ]
 initial
 begin
 	amostraIN5[4] = 1'b0;
+	amostraIN5[4] = #600000 1'b1;
+	amostraIN5[4] = #80000 1'b0;
 end 
 // amostraIN5[ 3 ]
 initial
 begin
 	amostraIN5[3] = 1'b0;
+	amostraIN5[3] = #440000 1'b1;
+	amostraIN5[3] = #160000 1'b0;
 end 
 // amostraIN5[ 2 ]
 initial
@@ -982,11 +1074,14 @@ end
 initial
 begin
 	amostraIN5[1] = 1'b0;
+	amostraIN5[1] = #600000 1'b1;
 end 
 // amostraIN5[ 0 ]
 initial
 begin
 	amostraIN5[0] = 1'b0;
+	amostraIN5[0] = #520000 1'b1;
+	amostraIN5[0] = #160000 1'b0;
 end 
 
 // clock
@@ -1000,6 +1095,12 @@ end
 // inicio
 initial
 begin
+	repeat(2)
+	begin
+		inicio = 1'b0;
+		inicio = #380000 1'b1;
+		# 20000;
+	end
 	inicio = 1'b0;
 end 
 
@@ -1019,7 +1120,7 @@ Interpolador_vlg_check_tst tb_out(
 	.amostraOUT(amostraOUT),
 	.amostraOUT2(amostraOUT2),
 	.endereco(endereco),
-	.incioImagem(incioImagem),
+	.inicioImagem(inicioImagem),
 	.trocaLinha(trocaLinha),
 	.valido(valido),
 	.sampler_rx(sampler)

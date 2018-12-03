@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Downloads\SDA-Prova-master\Upsampling\simulation\qsim
+vUpsampling
+Z1 IlM16GdkjA@<X;k=NM_BI92
+Z2 V;kBkJl<NG<[Q_hjLokd9I1
+Z3 dC:\Users\Aluno\Downloads\SDA-Prova-master\Upsampling\simulation\qsim
+Z4 w1543857810
+Z5 8Upsampling.vo
+Z6 FUpsampling.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Upsampling.vo|
+Z9 o-work work -O0
+Z10 n@upsampling
+!i10b 1
+Z11 !s100 d9HdbN3z9CB]5^RQIUzeN0
+!s85 0
+Z12 !s108 1543857811.482000
+Z13 !s107 Upsampling.vo|
+!s101 -O0
+vUpsampling_vlg_check_tst
+!i10b 1
+Z14 !s100 jo>Va4DZDG]Va9UgNIVKQ0
+Z15 IBCKTTjc9:;M9Wo=eDjM7f0
+Z16 V2jf_BX2j7ajKJ>zC_oJZl1
+R3
+R4
+Z17 8Upsampling.vt
+Z18 FUpsampling.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z19 !s108 1543857811.638000
+Z20 !s107 Upsampling.vt|
+Z21 !s90 -work|work|Upsampling.vt|
+!s101 -O0
+R9
+Z22 n@upsampling_vlg_check_tst
+vUpsampling_vlg_sample_tst
+!i10b 1
+Z23 !s100 dg_M;e<i<d=K4kB0CeAIT3
+Z24 I[:@]B[X?:JHH1]59o][D01
+Z25 VoLbk<k6A[C;G:3lR9Ji`81
+R3
+R4
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z26 n@upsampling_vlg_sample_tst
+vUpsampling_vlg_vec_tst
+!i10b 1
+Z27 !s100 QTYWIQIU8O7z4Qll9?bWZ2
+Z28 I8P`jMoQBU3EFS^?U9`CIS2
+Z29 VF;DEmmOemEZ[fnhW;a:R61
+R3
+R4
+R17
+R18
+Z30 L0 489
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z31 n@upsampling_vlg_vec_tst

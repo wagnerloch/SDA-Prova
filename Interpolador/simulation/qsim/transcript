@@ -1,0 +1,79 @@
+# do Interpolador.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Interpolador
+# 
+# Top level modules:
+# 	Interpolador
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Interpolador_vlg_sample_tst
+# -- Compiling module Interpolador_vlg_check_tst
+# -- Compiling module Interpolador_vlg_vec_tst
+# 
+# Top level modules:
+# 	Interpolador_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Interpolador_vlg_vec_tst 
+# Loading work.Interpolador_vlg_vec_tst
+# Loading work.Interpolador
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading work.Interpolador_vlg_sample_tst
+# Loading work.Interpolador_vlg_check_tst
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# ERROR! Vector Mismatch for output port amostraOUT[0] :: @time = 400000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000111
+# ERROR! Vector Mismatch for output port amostraOUT[1] :: @time = 400000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000111
+# ERROR! Vector Mismatch for output port amostraOUT[2] :: @time = 400000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000111
+# ERROR! Vector Mismatch for output port amostraOUT[3] :: @time = 450000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001000
+# ERROR! Vector Mismatch for output port amostraOUT2[0] :: @time = 470000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000101
+# ERROR! Vector Mismatch for output port amostraOUT2[2] :: @time = 470000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000101
+# ERROR! Vector Mismatch for output port amostraOUT[0] :: @time = 605000.000 ps
+#      Expected value = 11101001
+#      Real value = 00001000
+# ERROR! Vector Mismatch for output port amostraOUT[5] :: @time = 605000.000 ps
+#      Expected value = 11101001
+#      Real value = 00001000
+# ERROR! Vector Mismatch for output port amostraOUT[6] :: @time = 605000.000 ps
+#      Expected value = 11101001
+#      Real value = 00001000
+# ERROR! Vector Mismatch for output port amostraOUT[7] :: @time = 605000.000 ps
+#      Expected value = 11101001
+#      Real value = 00001000
+# ERROR! Vector Mismatch for output port amostraOUT2[3] :: @time = 605000.000 ps
+#      Expected value = 00001000
+#      Real value = 00000100
+# ERROR! Vector Mismatch for output port amostraOUT2[1] :: @time = 630000.000 ps
+#      Expected value = 00001000
+#      Real value = 00000010
+# ERROR! Vector Mismatch for output port amostraOUT2[0] :: @time = 685000.000 ps
+#      Expected value = 11101001
+#      Real value = 00000010
+# ERROR! Vector Mismatch for output port amostraOUT2[5] :: @time = 685000.000 ps
+#      Expected value = 11101001
+#      Real value = 00000010
+# ERROR! Vector Mismatch for output port amostraOUT2[6] :: @time = 685000.000 ps
+#      Expected value = 11101001
+#      Real value = 00000010
+# ERROR! Vector Mismatch for output port amostraOUT2[7] :: @time = 685000.000 ps
+#      Expected value = 11101001
+#      Real value = 00000010
+#          16 mismatched vectors : Simulation failed !
+# ** Note: $finish    : Interpolador.vt(712)
+#    Time: 1 us  Iteration: 0  Instance: /Interpolador_vlg_vec_tst/tb_out

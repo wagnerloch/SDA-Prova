@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Downloads\SDA-Prova-master\Interpolador\simulation\qsim
+vInterpolador
+Z1 II;5jmoLz6][V?4A4R@km?1
+Z2 V^idXhoSZK7Ji4<1K4TXhF2
+Z3 dC:\Users\Aluno\Downloads\SDA-Prova-master\Interpolador\simulation\qsim
+Z4 w1543858393
+Z5 8Interpolador.vo
+Z6 FInterpolador.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@interpolador
+!i10b 1
+Z10 !s100 GOb3zGVkE79b1hYeX7^3]1
+!s85 0
+Z11 !s108 1543858393.733000
+Z12 !s107 Interpolador.vo|
+Z13 !s90 -work|work|Interpolador.vo|
+!s101 -O0
+vInterpolador_vlg_check_tst
+!i10b 1
+!s100 Pz=Q28Xm>MDJP=nnHQ<mc2
+ICYZVmfP5g;oC^FkNTnZ1A3
+VfM^_lO`KQliO4N]1ZH9?]0
+R3
+Z14 w1543858392
+Z15 8Interpolador.vt
+Z16 FInterpolador.vt
+L0 71
+R7
+r1
+!s85 0
+31
+Z17 !s108 1543858393.905000
+Z18 !s107 Interpolador.vt|
+Z19 !s90 -work|work|Interpolador.vt|
+!s101 -O0
+R8
+n@interpolador_vlg_check_tst
+vInterpolador_vlg_sample_tst
+!i10b 1
+!s100 dATi:BTB?2T]Ha8J>4ZZd0
+I@N=U2ln1[hW7_UlG>ae6<2
+V5Q^m2MB4ECDf:ToX:8^Yf2
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@interpolador_vlg_sample_tst
+vInterpolador_vlg_vec_tst
+!i10b 1
+!s100 87P=Q]?LWXDU@DZez<fQ[3
+I:DY]:@=;U`VlSN907bIP42
+VaG[C[YOKc3bm^;JY;Yb600
+R3
+R14
+R15
+R16
+L0 716
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@interpolador_vlg_vec_tst

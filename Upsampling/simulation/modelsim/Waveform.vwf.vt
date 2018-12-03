@@ -1,0 +1,994 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/03/2018 15:19:36"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Upsampling
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Upsampling_vlg_sample_tst(
+	clk,
+	reset,
+	sampleIn,
+	start,
+	sampler_tx
+);
+input  clk;
+input  reset;
+input [7:0] sampleIn;
+input  start;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or reset or sampleIn or start)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Upsampling_vlg_check_tst (
+	newLine,
+	sampleOut1,
+	sampleOut2,
+	valido,
+	sampler_rx
+);
+input  newLine;
+input [7:0] sampleOut1;
+input [7:0] sampleOut2;
+input  valido;
+input sampler_rx;
+
+reg  newLine_expected;
+reg [7:0] sampleOut1_expected;
+reg [7:0] sampleOut2_expected;
+reg  valido_expected;
+
+reg  newLine_prev;
+reg [7:0] sampleOut1_prev;
+reg [7:0] sampleOut2_prev;
+reg  valido_prev;
+
+reg  newLine_expected_prev;
+reg [7:0] sampleOut1_expected_prev;
+reg [7:0] sampleOut2_expected_prev;
+reg  valido_expected_prev;
+
+reg  last_newLine_exp;
+reg [7:0] last_sampleOut1_exp;
+reg [7:0] last_sampleOut2_exp;
+reg  last_valido_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	newLine_prev = newLine;
+	sampleOut1_prev = sampleOut1;
+	sampleOut2_prev = sampleOut2;
+	valido_prev = valido;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	newLine_expected_prev = newLine_expected;
+	sampleOut1_expected_prev = sampleOut1_expected;
+	sampleOut2_expected_prev = sampleOut2_expected;
+	valido_expected_prev = valido_expected;
+end
+
+
+// expected sampleOut1[ 7 ]
+initial
+begin
+	sampleOut1_expected[7] = 1'bX;
+end 
+// expected sampleOut1[ 6 ]
+initial
+begin
+	sampleOut1_expected[6] = 1'bX;
+end 
+// expected sampleOut1[ 5 ]
+initial
+begin
+	sampleOut1_expected[5] = 1'bX;
+end 
+// expected sampleOut1[ 4 ]
+initial
+begin
+	sampleOut1_expected[4] = 1'bX;
+end 
+// expected sampleOut1[ 3 ]
+initial
+begin
+	sampleOut1_expected[3] = 1'bX;
+end 
+// expected sampleOut1[ 2 ]
+initial
+begin
+	sampleOut1_expected[2] = 1'bX;
+end 
+// expected sampleOut1[ 1 ]
+initial
+begin
+	sampleOut1_expected[1] = 1'bX;
+end 
+// expected sampleOut1[ 0 ]
+initial
+begin
+	sampleOut1_expected[0] = 1'bX;
+end 
+// expected sampleOut2[ 7 ]
+initial
+begin
+	sampleOut2_expected[7] = 1'bX;
+end 
+// expected sampleOut2[ 6 ]
+initial
+begin
+	sampleOut2_expected[6] = 1'bX;
+end 
+// expected sampleOut2[ 5 ]
+initial
+begin
+	sampleOut2_expected[5] = 1'bX;
+end 
+// expected sampleOut2[ 4 ]
+initial
+begin
+	sampleOut2_expected[4] = 1'bX;
+end 
+// expected sampleOut2[ 3 ]
+initial
+begin
+	sampleOut2_expected[3] = 1'bX;
+end 
+// expected sampleOut2[ 2 ]
+initial
+begin
+	sampleOut2_expected[2] = 1'bX;
+end 
+// expected sampleOut2[ 1 ]
+initial
+begin
+	sampleOut2_expected[1] = 1'bX;
+end 
+// expected sampleOut2[ 0 ]
+initial
+begin
+	sampleOut2_expected[0] = 1'bX;
+end 
+
+// expected newLine
+initial
+begin
+	newLine_expected = 1'bX;
+end 
+
+// expected valido
+initial
+begin
+	valido_expected = 1'bX;
+end 
+// generate trigger
+always @(newLine_expected or newLine or sampleOut1_expected or sampleOut1 or sampleOut2_expected or sampleOut2 or valido_expected or valido)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected newLine = %b | expected sampleOut1 = %b | expected sampleOut2 = %b | expected valido = %b | ",newLine_expected_prev,sampleOut1_expected_prev,sampleOut2_expected_prev,valido_expected_prev);
+	$display("| real newLine = %b | real sampleOut1 = %b | real sampleOut2 = %b | real valido = %b | ",newLine_prev,sampleOut1_prev,sampleOut2_prev,valido_prev);
+`endif
+	if (
+		( newLine_expected_prev !== 1'bx ) && ( newLine_prev !== newLine_expected_prev )
+		&& ((newLine_expected_prev !== last_newLine_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port newLine :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", newLine_expected_prev);
+		$display ("     Real value = %b", newLine_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_newLine_exp = newLine_expected_prev;
+	end
+	if (
+		( sampleOut1_expected_prev[0] !== 1'bx ) && ( sampleOut1_prev[0] !== sampleOut1_expected_prev[0] )
+		&& ((sampleOut1_expected_prev[0] !== last_sampleOut1_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[0] = sampleOut1_expected_prev[0];
+	end
+	if (
+		( sampleOut1_expected_prev[1] !== 1'bx ) && ( sampleOut1_prev[1] !== sampleOut1_expected_prev[1] )
+		&& ((sampleOut1_expected_prev[1] !== last_sampleOut1_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[1] = sampleOut1_expected_prev[1];
+	end
+	if (
+		( sampleOut1_expected_prev[2] !== 1'bx ) && ( sampleOut1_prev[2] !== sampleOut1_expected_prev[2] )
+		&& ((sampleOut1_expected_prev[2] !== last_sampleOut1_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[2] = sampleOut1_expected_prev[2];
+	end
+	if (
+		( sampleOut1_expected_prev[3] !== 1'bx ) && ( sampleOut1_prev[3] !== sampleOut1_expected_prev[3] )
+		&& ((sampleOut1_expected_prev[3] !== last_sampleOut1_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[3] = sampleOut1_expected_prev[3];
+	end
+	if (
+		( sampleOut1_expected_prev[4] !== 1'bx ) && ( sampleOut1_prev[4] !== sampleOut1_expected_prev[4] )
+		&& ((sampleOut1_expected_prev[4] !== last_sampleOut1_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[4] = sampleOut1_expected_prev[4];
+	end
+	if (
+		( sampleOut1_expected_prev[5] !== 1'bx ) && ( sampleOut1_prev[5] !== sampleOut1_expected_prev[5] )
+		&& ((sampleOut1_expected_prev[5] !== last_sampleOut1_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[5] = sampleOut1_expected_prev[5];
+	end
+	if (
+		( sampleOut1_expected_prev[6] !== 1'bx ) && ( sampleOut1_prev[6] !== sampleOut1_expected_prev[6] )
+		&& ((sampleOut1_expected_prev[6] !== last_sampleOut1_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[6] = sampleOut1_expected_prev[6];
+	end
+	if (
+		( sampleOut1_expected_prev[7] !== 1'bx ) && ( sampleOut1_prev[7] !== sampleOut1_expected_prev[7] )
+		&& ((sampleOut1_expected_prev[7] !== last_sampleOut1_exp[7]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut1[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut1_expected_prev);
+		$display ("     Real value = %b", sampleOut1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sampleOut1_exp[7] = sampleOut1_expected_prev[7];
+	end
+	if (
+		( sampleOut2_expected_prev[0] !== 1'bx ) && ( sampleOut2_prev[0] !== sampleOut2_expected_prev[0] )
+		&& ((sampleOut2_expected_prev[0] !== last_sampleOut2_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[0] = sampleOut2_expected_prev[0];
+	end
+	if (
+		( sampleOut2_expected_prev[1] !== 1'bx ) && ( sampleOut2_prev[1] !== sampleOut2_expected_prev[1] )
+		&& ((sampleOut2_expected_prev[1] !== last_sampleOut2_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[1] = sampleOut2_expected_prev[1];
+	end
+	if (
+		( sampleOut2_expected_prev[2] !== 1'bx ) && ( sampleOut2_prev[2] !== sampleOut2_expected_prev[2] )
+		&& ((sampleOut2_expected_prev[2] !== last_sampleOut2_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[2] = sampleOut2_expected_prev[2];
+	end
+	if (
+		( sampleOut2_expected_prev[3] !== 1'bx ) && ( sampleOut2_prev[3] !== sampleOut2_expected_prev[3] )
+		&& ((sampleOut2_expected_prev[3] !== last_sampleOut2_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[3] = sampleOut2_expected_prev[3];
+	end
+	if (
+		( sampleOut2_expected_prev[4] !== 1'bx ) && ( sampleOut2_prev[4] !== sampleOut2_expected_prev[4] )
+		&& ((sampleOut2_expected_prev[4] !== last_sampleOut2_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[4] = sampleOut2_expected_prev[4];
+	end
+	if (
+		( sampleOut2_expected_prev[5] !== 1'bx ) && ( sampleOut2_prev[5] !== sampleOut2_expected_prev[5] )
+		&& ((sampleOut2_expected_prev[5] !== last_sampleOut2_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[5] = sampleOut2_expected_prev[5];
+	end
+	if (
+		( sampleOut2_expected_prev[6] !== 1'bx ) && ( sampleOut2_prev[6] !== sampleOut2_expected_prev[6] )
+		&& ((sampleOut2_expected_prev[6] !== last_sampleOut2_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[6] = sampleOut2_expected_prev[6];
+	end
+	if (
+		( sampleOut2_expected_prev[7] !== 1'bx ) && ( sampleOut2_prev[7] !== sampleOut2_expected_prev[7] )
+		&& ((sampleOut2_expected_prev[7] !== last_sampleOut2_exp[7]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sampleOut2[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sampleOut2_expected_prev);
+		$display ("     Real value = %b", sampleOut2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_sampleOut2_exp[7] = sampleOut2_expected_prev[7];
+	end
+	if (
+		( valido_expected_prev !== 1'bx ) && ( valido_prev !== valido_expected_prev )
+		&& ((valido_expected_prev !== last_valido_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port valido :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", valido_expected_prev);
+		$display ("     Real value = %b", valido_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_valido_exp = valido_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Upsampling_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg reset;
+reg [7:0] sampleIn;
+reg start;
+// wires                                               
+wire newLine;
+wire [7:0] sampleOut1;
+wire [7:0] sampleOut2;
+wire valido;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Upsampling i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.newLine(newLine),
+	.reset(reset),
+	.sampleIn(sampleIn),
+	.sampleOut1(sampleOut1),
+	.sampleOut2(sampleOut2),
+	.start(start),
+	.valido(valido)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+
+// start
+always
+begin
+	start = 1'b0;
+	start = #10000 1'b1;
+	#10000;
+end 
+// sampleIn[ 7 ]
+initial
+begin
+	sampleIn[7] = 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #30000 1'b0;
+	sampleIn[7] = #70000 1'b1;
+	sampleIn[7] = #20000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #30000 1'b1;
+	sampleIn[7] = #40000 1'b0;
+	sampleIn[7] = #70000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #30000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #70000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #30000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #30000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #20000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #20000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #50000 1'b1;
+	sampleIn[7] = #20000 1'b0;
+	sampleIn[7] = #10000 1'b1;
+	sampleIn[7] = #40000 1'b0;
+	sampleIn[7] = #30000 1'b1;
+	sampleIn[7] = #30000 1'b0;
+	sampleIn[7] = #20000 1'b1;
+	sampleIn[7] = #10000 1'b0;
+	sampleIn[7] = #100000 1'b1;
+	sampleIn[7] = #20000 1'b0;
+	sampleIn[7] = #40000 1'b1;
+end 
+// sampleIn[ 6 ]
+initial
+begin
+	sampleIn[6] = 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #30000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #20000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #20000 1'b1;
+	sampleIn[6] = #30000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #20000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #20000 1'b0;
+	sampleIn[6] = #20000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #20000 1'b0;
+	sampleIn[6] = #20000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #40000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #30000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #70000 1'b1;
+	sampleIn[6] = #20000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #30000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #20000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #40000 1'b1;
+	sampleIn[6] = #10000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #40000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+	sampleIn[6] = #30000 1'b0;
+	sampleIn[6] = #40000 1'b1;
+	sampleIn[6] = #50000 1'b0;
+	sampleIn[6] = #10000 1'b1;
+end 
+// sampleIn[ 5 ]
+initial
+begin
+	sampleIn[5] = 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #20000 1'b0;
+	sampleIn[5] = #20000 1'b1;
+	sampleIn[5] = #30000 1'b0;
+	sampleIn[5] = #50000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #30000 1'b1;
+	sampleIn[5] = #30000 1'b0;
+	sampleIn[5] = #20000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #30000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #30000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #20000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #40000 1'b0;
+	sampleIn[5] = #20000 1'b1;
+	sampleIn[5] = #20000 1'b0;
+	sampleIn[5] = #20000 1'b1;
+	sampleIn[5] = #20000 1'b0;
+	sampleIn[5] = #60000 1'b1;
+	sampleIn[5] = #30000 1'b0;
+	sampleIn[5] = #30000 1'b1;
+	sampleIn[5] = #30000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #20000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #50000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #20000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+	sampleIn[5] = #20000 1'b1;
+	sampleIn[5] = #30000 1'b0;
+	sampleIn[5] = #10000 1'b1;
+	sampleIn[5] = #20000 1'b0;
+	sampleIn[5] = #40000 1'b1;
+	sampleIn[5] = #10000 1'b0;
+end 
+// sampleIn[ 4 ]
+initial
+begin
+	sampleIn[4] = 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #50000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #30000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #30000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #30000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #30000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #30000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #30000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #10000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #60000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #60000 1'b1;
+	sampleIn[4] = #20000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #10000 1'b0;
+	sampleIn[4] = #20000 1'b1;
+	sampleIn[4] = #40000 1'b0;
+end 
+// sampleIn[ 3 ]
+initial
+begin
+	sampleIn[3] = 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #30000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #60000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #30000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #30000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #30000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #80000 1'b1;
+	sampleIn[3] = #30000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #20000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #60000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+	sampleIn[3] = #10000 1'b0;
+	sampleIn[3] = #10000 1'b1;
+	sampleIn[3] = #70000 1'b0;
+	sampleIn[3] = #20000 1'b1;
+end 
+// sampleIn[ 2 ]
+initial
+begin
+	sampleIn[2] = 1'b0;
+	sampleIn[2] = #30000 1'b1;
+	sampleIn[2] = #30000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #20000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #30000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #20000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #40000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #20000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #20000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #20000 1'b0;
+	sampleIn[2] = #30000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #20000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #40000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #30000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #30000 1'b0;
+	sampleIn[2] = #30000 1'b1;
+	sampleIn[2] = #10000 1'b0;
+	sampleIn[2] = #20000 1'b1;
+	sampleIn[2] = #30000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #60000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #50000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+	sampleIn[2] = #30000 1'b0;
+	sampleIn[2] = #10000 1'b1;
+end 
+// sampleIn[ 1 ]
+initial
+begin
+	sampleIn[1] = 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #20000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #20000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #20000 1'b0;
+	sampleIn[1] = #60000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #50000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #50000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #20000 1'b0;
+	sampleIn[1] = #30000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #30000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #30000 1'b1;
+	sampleIn[1] = #30000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #20000 1'b0;
+	sampleIn[1] = #40000 1'b1;
+	sampleIn[1] = #40000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #60000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #30000 1'b0;
+	sampleIn[1] = #10000 1'b1;
+	sampleIn[1] = #20000 1'b0;
+	sampleIn[1] = #20000 1'b1;
+	sampleIn[1] = #10000 1'b0;
+end 
+// sampleIn[ 0 ]
+initial
+begin
+	sampleIn[0] = 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #40000 1'b1;
+	sampleIn[0] = #50000 1'b0;
+	sampleIn[0] = #40000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #70000 1'b1;
+	sampleIn[0] = #30000 1'b0;
+	sampleIn[0] = #20000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #30000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #20000 1'b1;
+	sampleIn[0] = #30000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #30000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #40000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #30000 1'b1;
+	sampleIn[0] = #10000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #30000 1'b0;
+	sampleIn[0] = #20000 1'b1;
+	sampleIn[0] = #30000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #30000 1'b0;
+	sampleIn[0] = #10000 1'b1;
+	sampleIn[0] = #20000 1'b0;
+end 
+
+Upsampling_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.reset(reset),
+	.sampleIn(sampleIn),
+	.start(start),
+	.sampler_tx(sampler)
+);
+
+Upsampling_vlg_check_tst tb_out(
+	.newLine(newLine),
+	.sampleOut1(sampleOut1),
+	.sampleOut2(sampleOut2),
+	.valido(valido),
+	.sampler_rx(sampler)
+);
+endmodule
+

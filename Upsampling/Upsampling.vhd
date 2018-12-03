@@ -49,7 +49,7 @@ architecture behavioral of Upsampling is
 	signal auxWriteEnable, auxInicio, auxTrocaLinha, stop,
 	auxInicioImagem, auxValido										: STD_LOGIC;
 	signal amostraMemory, result1, result2						: STD_LOGIC_VECTOR (7 DOWNTO 0);
-	signal auxIn0, auxIn1, auxIn2, auxIn3, auxIn4, auxIn5	: STD_LOGIC_VECTOR (7 DOWNTO 0);
+	signal auxIn0, auxIn1, auxIn2, auxIn3, auxIn4, auxIn5, temp	: STD_LOGIC_VECTOR (7 DOWNTO 0);
 
 	TYPE STATE_TYPE IS (estadoParado, estadoProcessando);
 	SIGNAL estado_atual, proximo_estado: STATE_TYPE;
@@ -88,6 +88,7 @@ begin
 	
 	process (estado_atual, clk)
 	begin
+		auxWriteEnable <= '1';
 		case estado_atual is
 			when estadoParado =>
 				sampleOut1 <= "00000000";
@@ -95,16 +96,18 @@ begin
 				valido <= '0';
 				newLine <= '0';
 				if start = '1' then
+					auxInicio <= '1';
 					proximo_estado <= estadoProcessando;
 				else
 					proximo_estado <= estadoParado;
 				end if;
 			when estadoProcessando =>
+				temp <= "01101010";
+				auxInicio <= '0';
 				sampleOut1 <= result1;
 				sampleOut2 <= result2;
 				valido <= auxValido;
 				newLine <= auxTrocaLinha;
-				auxWriteEnable <= '1';
 				--if (auxTrocaLinha = '1') then
 				--	auxWriteEnable <= '1';
 				--else
