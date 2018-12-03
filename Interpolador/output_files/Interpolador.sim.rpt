@@ -1,0 +1,1009 @@
+Simulator report for Interpolador
+Mon Dec 03 02:35:12 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 536 nodes    ;
+; Simulation Coverage         ;      19.92 % ;
+; Total Number of Transitions ; 1725         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                       ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                     ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                         ;               ;
+; Vector input source                                                                        ; D:/GitHub/PROVA-SDA/INTERPOALD/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                          ; On            ;
+; Check outputs                                                                              ; Off                                         ; Off           ;
+; Report simulation coverage                                                                 ; On                                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                         ; Off           ;
+; Detect glitches                                                                            ; Off                                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                        ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      19.92 % ;
+; Total nodes checked                                 ; 536          ;
+; Total output ports checked                          ; 532          ;
+; Total output ports with complete 1/0-value coverage ; 106          ;
+; Total output ports with no 1/0-value coverage       ; 314          ;
+; Total output ports with no 1-value coverage         ; 334          ;
+; Total output ports with no 0-value coverage         ; 406          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |Interpolador|auxInicioImagem~0  ; |Interpolador|auxInicioImagem~0  ; out              ;
+; |Interpolador|auxInicioImagem~1  ; |Interpolador|auxInicioImagem~1  ; out              ;
+; |Interpolador|auxInicioImagem~2  ; |Interpolador|auxInicioImagem~2  ; out              ;
+; |Interpolador|processing~0       ; |Interpolador|processing~0       ; out              ;
+; |Interpolador|auxInicioImagem~3  ; |Interpolador|auxInicioImagem~3  ; out              ;
+; |Interpolador|auxInicioImagem~4  ; |Interpolador|auxInicioImagem~4  ; out              ;
+; |Interpolador|auxInicioImagem~5  ; |Interpolador|auxInicioImagem~5  ; out              ;
+; |Interpolador|auxTrocaLinha~0    ; |Interpolador|auxTrocaLinha~0    ; out              ;
+; |Interpolador|auxTrocaLinha~1    ; |Interpolador|auxTrocaLinha~1    ; out              ;
+; |Interpolador|auxTrocaLinha~2    ; |Interpolador|auxTrocaLinha~2    ; out              ;
+; |Interpolador|auxTrocaLinha~3    ; |Interpolador|auxTrocaLinha~3    ; out              ;
+; |Interpolador|auxTrocaLinha~4    ; |Interpolador|auxTrocaLinha~4    ; out              ;
+; |Interpolador|auxTrocaLinha~5    ; |Interpolador|auxTrocaLinha~5    ; out              ;
+; |Interpolador|auxInicioImagem~6  ; |Interpolador|auxInicioImagem~6  ; out              ;
+; |Interpolador|auxInicioImagem~7  ; |Interpolador|auxInicioImagem~7  ; out              ;
+; |Interpolador|auxInicioImagem~8  ; |Interpolador|auxInicioImagem~8  ; out              ;
+; |Interpolador|trocaLinha~0       ; |Interpolador|trocaLinha~0       ; out              ;
+; |Interpolador|aux~2              ; |Interpolador|aux~2              ; out              ;
+; |Interpolador|auxEndereco[4]     ; |Interpolador|auxEndereco[4]     ; regout           ;
+; |Interpolador|auxEndereco~4      ; |Interpolador|auxEndereco~4      ; out              ;
+; |Interpolador|auxEndereco~5      ; |Interpolador|auxEndereco~5      ; out              ;
+; |Interpolador|auxEndereco~6      ; |Interpolador|auxEndereco~6      ; out              ;
+; |Interpolador|auxEndereco~7      ; |Interpolador|auxEndereco~7      ; out              ;
+; |Interpolador|auxEndereco~8      ; |Interpolador|auxEndereco~8      ; out              ;
+; |Interpolador|auxEndereco~9      ; |Interpolador|auxEndereco~9      ; out              ;
+; |Interpolador|processing~1       ; |Interpolador|processing~1       ; out              ;
+; |Interpolador|auxInicioImagem~9  ; |Interpolador|auxInicioImagem~9  ; out              ;
+; |Interpolador|auxInicioImagem~10 ; |Interpolador|auxInicioImagem~10 ; out              ;
+; |Interpolador|auxInicioImagem~11 ; |Interpolador|auxInicioImagem~11 ; out              ;
+; |Interpolador|trocaLinha~1       ; |Interpolador|trocaLinha~1       ; out              ;
+; |Interpolador|auxEndereco[3]     ; |Interpolador|auxEndereco[3]     ; regout           ;
+; |Interpolador|auxEndereco[2]     ; |Interpolador|auxEndereco[2]     ; regout           ;
+; |Interpolador|inicioImagem~0     ; |Interpolador|inicioImagem~0     ; out              ;
+; |Interpolador|processing~2       ; |Interpolador|processing~2       ; out              ;
+; |Interpolador|auxEndereco[1]     ; |Interpolador|auxEndereco[1]     ; regout           ;
+; |Interpolador|auxEndereco[0]     ; |Interpolador|auxEndereco[0]     ; regout           ;
+; |Interpolador|endereco[0]~reg0   ; |Interpolador|endereco[0]~reg0   ; regout           ;
+; |Interpolador|endereco[1]~reg0   ; |Interpolador|endereco[1]~reg0   ; regout           ;
+; |Interpolador|endereco[2]~reg0   ; |Interpolador|endereco[2]~reg0   ; regout           ;
+; |Interpolador|endereco[3]~reg0   ; |Interpolador|endereco[3]~reg0   ; regout           ;
+; |Interpolador|endereco[4]~reg0   ; |Interpolador|endereco[4]~reg0   ; regout           ;
+; |Interpolador|valido~reg0        ; |Interpolador|valido~reg0        ; regout           ;
+; |Interpolador|inicioImagem~reg0  ; |Interpolador|inicioImagem~reg0  ; regout           ;
+; |Interpolador|trocaLinha~reg0    ; |Interpolador|trocaLinha~reg0    ; regout           ;
+; |Interpolador|processing         ; |Interpolador|processing         ; regout           ;
+; |Interpolador|auxTrocaLinha[0]   ; |Interpolador|auxTrocaLinha[0]   ; regout           ;
+; |Interpolador|auxTrocaLinha[1]   ; |Interpolador|auxTrocaLinha[1]   ; regout           ;
+; |Interpolador|auxTrocaLinha[2]   ; |Interpolador|auxTrocaLinha[2]   ; regout           ;
+; |Interpolador|auxInicioImagem[0] ; |Interpolador|auxInicioImagem[0] ; regout           ;
+; |Interpolador|auxInicioImagem[1] ; |Interpolador|auxInicioImagem[1] ; regout           ;
+; |Interpolador|auxInicioImagem[2] ; |Interpolador|auxInicioImagem[2] ; regout           ;
+; |Interpolador|clock              ; |Interpolador|clock              ; out              ;
+; |Interpolador|inicio             ; |Interpolador|inicio             ; out              ;
+; |Interpolador|endereco[0]        ; |Interpolador|endereco[0]        ; pin_out          ;
+; |Interpolador|endereco[1]        ; |Interpolador|endereco[1]        ; pin_out          ;
+; |Interpolador|endereco[2]        ; |Interpolador|endereco[2]        ; pin_out          ;
+; |Interpolador|endereco[3]        ; |Interpolador|endereco[3]        ; pin_out          ;
+; |Interpolador|endereco[4]        ; |Interpolador|endereco[4]        ; pin_out          ;
+; |Interpolador|trocaLinha         ; |Interpolador|trocaLinha         ; pin_out          ;
+; |Interpolador|inicioImagem       ; |Interpolador|inicioImagem       ; pin_out          ;
+; |Interpolador|valido             ; |Interpolador|valido             ; pin_out          ;
+; |Interpolador|Add0~0             ; |Interpolador|Add0~0             ; out0             ;
+; |Interpolador|Add0~1             ; |Interpolador|Add0~1             ; out0             ;
+; |Interpolador|Add0~2             ; |Interpolador|Add0~2             ; out0             ;
+; |Interpolador|Add1~0             ; |Interpolador|Add1~0             ; out0             ;
+; |Interpolador|Add1~1             ; |Interpolador|Add1~1             ; out0             ;
+; |Interpolador|Add1~2             ; |Interpolador|Add1~2             ; out0             ;
+; |Interpolador|Add6~10            ; |Interpolador|Add6~10            ; out0             ;
+; |Interpolador|Add6~13            ; |Interpolador|Add6~13            ; out0             ;
+; |Interpolador|Add7~7             ; |Interpolador|Add7~7             ; out0             ;
+; |Interpolador|Add7~12            ; |Interpolador|Add7~12            ; out0             ;
+; |Interpolador|Add7~15            ; |Interpolador|Add7~15            ; out0             ;
+; |Interpolador|Add8~7             ; |Interpolador|Add8~7             ; out0             ;
+; |Interpolador|Add8~8             ; |Interpolador|Add8~8             ; out0             ;
+; |Interpolador|Add8~10            ; |Interpolador|Add8~10            ; out0             ;
+; |Interpolador|Add8~12            ; |Interpolador|Add8~12            ; out0             ;
+; |Interpolador|Add8~13            ; |Interpolador|Add8~13            ; out0             ;
+; |Interpolador|Add8~15            ; |Interpolador|Add8~15            ; out0             ;
+; |Interpolador|Add8~16            ; |Interpolador|Add8~16            ; out0             ;
+; |Interpolador|Add8~17            ; |Interpolador|Add8~17            ; out0             ;
+; |Interpolador|Add8~19            ; |Interpolador|Add8~19            ; out0             ;
+; |Interpolador|Add8~21            ; |Interpolador|Add8~21            ; out0             ;
+; |Interpolador|Add8~22            ; |Interpolador|Add8~22            ; out0             ;
+; |Interpolador|Add9~0             ; |Interpolador|Add9~0             ; out0             ;
+; |Interpolador|Add9~1             ; |Interpolador|Add9~1             ; out0             ;
+; |Interpolador|Add9~8             ; |Interpolador|Add9~8             ; out0             ;
+; |Interpolador|Add9~13            ; |Interpolador|Add9~13            ; out0             ;
+; |Interpolador|Add9~18            ; |Interpolador|Add9~18            ; out0             ;
+; |Interpolador|Add9~19            ; |Interpolador|Add9~19            ; out0             ;
+; |Interpolador|Add9~21            ; |Interpolador|Add9~21            ; out0             ;
+; |Interpolador|Add9~23            ; |Interpolador|Add9~23            ; out0             ;
+; |Interpolador|Add9~25            ; |Interpolador|Add9~25            ; out0             ;
+; |Interpolador|Add9~26            ; |Interpolador|Add9~26            ; out0             ;
+; |Interpolador|Add9~27            ; |Interpolador|Add9~27            ; out0             ;
+; |Interpolador|Add10~17           ; |Interpolador|Add10~17           ; out0             ;
+; |Interpolador|Add11~0            ; |Interpolador|Add11~0            ; out0             ;
+; |Interpolador|Add11~1            ; |Interpolador|Add11~1            ; out0             ;
+; |Interpolador|Add11~2            ; |Interpolador|Add11~2            ; out0             ;
+; |Interpolador|Add11~3            ; |Interpolador|Add11~3            ; out0             ;
+; |Interpolador|Add11~4            ; |Interpolador|Add11~4            ; out0             ;
+; |Interpolador|Add11~5            ; |Interpolador|Add11~5            ; out0             ;
+; |Interpolador|Add11~6            ; |Interpolador|Add11~6            ; out0             ;
+; |Interpolador|Add11~7            ; |Interpolador|Add11~7            ; out0             ;
+; |Interpolador|Add11~8            ; |Interpolador|Add11~8            ; out0             ;
+; |Interpolador|Equal0~0           ; |Interpolador|Equal0~0           ; out0             ;
+; |Interpolador|Equal1~0           ; |Interpolador|Equal1~0           ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Interpolador|auxEndereco[7]      ; |Interpolador|auxEndereco[7]      ; regout           ;
+; |Interpolador|auxEndereco[6]      ; |Interpolador|auxEndereco[6]      ; regout           ;
+; |Interpolador|auxEndereco[5]      ; |Interpolador|auxEndereco[5]      ; regout           ;
+; |Interpolador|EE~0                ; |Interpolador|EE~0                ; out              ;
+; |Interpolador|EE~1                ; |Interpolador|EE~1                ; out              ;
+; |Interpolador|EE~2                ; |Interpolador|EE~2                ; out              ;
+; |Interpolador|EE~3                ; |Interpolador|EE~3                ; out              ;
+; |Interpolador|EE~4                ; |Interpolador|EE~4                ; out              ;
+; |Interpolador|EE~6                ; |Interpolador|EE~6                ; out              ;
+; |Interpolador|EE~7                ; |Interpolador|EE~7                ; out              ;
+; |Interpolador|FF~0                ; |Interpolador|FF~0                ; out              ;
+; |Interpolador|FF~1                ; |Interpolador|FF~1                ; out              ;
+; |Interpolador|FF~2                ; |Interpolador|FF~2                ; out              ;
+; |Interpolador|FF~3                ; |Interpolador|FF~3                ; out              ;
+; |Interpolador|GG~0                ; |Interpolador|GG~0                ; out              ;
+; |Interpolador|GG~1                ; |Interpolador|GG~1                ; out              ;
+; |Interpolador|GG~6                ; |Interpolador|GG~6                ; out              ;
+; |Interpolador|GG~7                ; |Interpolador|GG~7                ; out              ;
+; |Interpolador|HH~0                ; |Interpolador|HH~0                ; out              ;
+; |Interpolador|HH~1                ; |Interpolador|HH~1                ; out              ;
+; |Interpolador|HH~6                ; |Interpolador|HH~6                ; out              ;
+; |Interpolador|HH~7                ; |Interpolador|HH~7                ; out              ;
+; |Interpolador|II~0                ; |Interpolador|II~0                ; out              ;
+; |Interpolador|II~1                ; |Interpolador|II~1                ; out              ;
+; |Interpolador|II~2                ; |Interpolador|II~2                ; out              ;
+; |Interpolador|II~3                ; |Interpolador|II~3                ; out              ;
+; |Interpolador|JJ~0                ; |Interpolador|JJ~0                ; out              ;
+; |Interpolador|JJ~1                ; |Interpolador|JJ~1                ; out              ;
+; |Interpolador|JJ~2                ; |Interpolador|JJ~2                ; out              ;
+; |Interpolador|JJ~3                ; |Interpolador|JJ~3                ; out              ;
+; |Interpolador|JJ~4                ; |Interpolador|JJ~4                ; out              ;
+; |Interpolador|JJ~5                ; |Interpolador|JJ~5                ; out              ;
+; |Interpolador|JJ~7                ; |Interpolador|JJ~7                ; out              ;
+; |Interpolador|amostraOUT~0        ; |Interpolador|amostraOUT~0        ; out              ;
+; |Interpolador|amostraOUT~1        ; |Interpolador|amostraOUT~1        ; out              ;
+; |Interpolador|amostraOUT~2        ; |Interpolador|amostraOUT~2        ; out              ;
+; |Interpolador|amostraOUT~3        ; |Interpolador|amostraOUT~3        ; out              ;
+; |Interpolador|amostraOUT~4        ; |Interpolador|amostraOUT~4        ; out              ;
+; |Interpolador|amostraOUT~6        ; |Interpolador|amostraOUT~6        ; out              ;
+; |Interpolador|amostraOUT~7        ; |Interpolador|amostraOUT~7        ; out              ;
+; |Interpolador|aux~0               ; |Interpolador|aux~0               ; out              ;
+; |Interpolador|amostraOUT2~0       ; |Interpolador|amostraOUT2~0       ; out              ;
+; |Interpolador|amostraOUT2~1       ; |Interpolador|amostraOUT2~1       ; out              ;
+; |Interpolador|amostraOUT2~2       ; |Interpolador|amostraOUT2~2       ; out              ;
+; |Interpolador|amostraOUT2~3       ; |Interpolador|amostraOUT2~3       ; out              ;
+; |Interpolador|amostraOUT2~4       ; |Interpolador|amostraOUT2~4       ; out              ;
+; |Interpolador|amostraOUT2~5       ; |Interpolador|amostraOUT2~5       ; out              ;
+; |Interpolador|auxEndereco~0       ; |Interpolador|auxEndereco~0       ; out              ;
+; |Interpolador|auxEndereco~1       ; |Interpolador|auxEndereco~1       ; out              ;
+; |Interpolador|auxEndereco~2       ; |Interpolador|auxEndereco~2       ; out              ;
+; |Interpolador|auxEndereco~3       ; |Interpolador|auxEndereco~3       ; out              ;
+; |Interpolador|auxEndereco[8]      ; |Interpolador|auxEndereco[8]      ; regout           ;
+; |Interpolador|auxEndereco[9]      ; |Interpolador|auxEndereco[9]      ; regout           ;
+; |Interpolador|amostraOUT2[2]~reg0 ; |Interpolador|amostraOUT2[2]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[3]~reg0 ; |Interpolador|amostraOUT2[3]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[4]~reg0 ; |Interpolador|amostraOUT2[4]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[5]~reg0 ; |Interpolador|amostraOUT2[5]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[6]~reg0 ; |Interpolador|amostraOUT2[6]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[7]~reg0 ; |Interpolador|amostraOUT2[7]~reg0 ; regout           ;
+; |Interpolador|aux[7]              ; |Interpolador|aux[7]              ; regout           ;
+; |Interpolador|amostraOUT[0]~reg0  ; |Interpolador|amostraOUT[0]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[1]~reg0  ; |Interpolador|amostraOUT[1]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[3]~reg0  ; |Interpolador|amostraOUT[3]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[4]~reg0  ; |Interpolador|amostraOUT[4]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[5]~reg0  ; |Interpolador|amostraOUT[5]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[6]~reg0  ; |Interpolador|amostraOUT[6]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[7]~reg0  ; |Interpolador|amostraOUT[7]~reg0  ; regout           ;
+; |Interpolador|JJ[0]               ; |Interpolador|JJ[0]               ; regout           ;
+; |Interpolador|JJ[2]               ; |Interpolador|JJ[2]               ; regout           ;
+; |Interpolador|JJ[3]               ; |Interpolador|JJ[3]               ; regout           ;
+; |Interpolador|JJ[4]               ; |Interpolador|JJ[4]               ; regout           ;
+; |Interpolador|JJ[5]               ; |Interpolador|JJ[5]               ; regout           ;
+; |Interpolador|JJ[6]               ; |Interpolador|JJ[6]               ; regout           ;
+; |Interpolador|JJ[7]               ; |Interpolador|JJ[7]               ; regout           ;
+; |Interpolador|II[4]               ; |Interpolador|II[4]               ; regout           ;
+; |Interpolador|II[5]               ; |Interpolador|II[5]               ; regout           ;
+; |Interpolador|II[6]               ; |Interpolador|II[6]               ; regout           ;
+; |Interpolador|II[7]               ; |Interpolador|II[7]               ; regout           ;
+; |Interpolador|HH[0]               ; |Interpolador|HH[0]               ; regout           ;
+; |Interpolador|HH[1]               ; |Interpolador|HH[1]               ; regout           ;
+; |Interpolador|HH[6]               ; |Interpolador|HH[6]               ; regout           ;
+; |Interpolador|HH[7]               ; |Interpolador|HH[7]               ; regout           ;
+; |Interpolador|GG[0]               ; |Interpolador|GG[0]               ; regout           ;
+; |Interpolador|GG[1]               ; |Interpolador|GG[1]               ; regout           ;
+; |Interpolador|GG[6]               ; |Interpolador|GG[6]               ; regout           ;
+; |Interpolador|GG[7]               ; |Interpolador|GG[7]               ; regout           ;
+; |Interpolador|FF[4]               ; |Interpolador|FF[4]               ; regout           ;
+; |Interpolador|FF[5]               ; |Interpolador|FF[5]               ; regout           ;
+; |Interpolador|FF[6]               ; |Interpolador|FF[6]               ; regout           ;
+; |Interpolador|FF[7]               ; |Interpolador|FF[7]               ; regout           ;
+; |Interpolador|EE[0]               ; |Interpolador|EE[0]               ; regout           ;
+; |Interpolador|EE[1]               ; |Interpolador|EE[1]               ; regout           ;
+; |Interpolador|EE[3]               ; |Interpolador|EE[3]               ; regout           ;
+; |Interpolador|EE[4]               ; |Interpolador|EE[4]               ; regout           ;
+; |Interpolador|EE[5]               ; |Interpolador|EE[5]               ; regout           ;
+; |Interpolador|EE[6]               ; |Interpolador|EE[6]               ; regout           ;
+; |Interpolador|EE[7]               ; |Interpolador|EE[7]               ; regout           ;
+; |Interpolador|endereco[5]~reg0    ; |Interpolador|endereco[5]~reg0    ; regout           ;
+; |Interpolador|endereco[6]~reg0    ; |Interpolador|endereco[6]~reg0    ; regout           ;
+; |Interpolador|endereco[7]~reg0    ; |Interpolador|endereco[7]~reg0    ; regout           ;
+; |Interpolador|endereco[8]~reg0    ; |Interpolador|endereco[8]~reg0    ; regout           ;
+; |Interpolador|endereco[9]~reg0    ; |Interpolador|endereco[9]~reg0    ; regout           ;
+; |Interpolador|amostraIN0[0]       ; |Interpolador|amostraIN0[0]       ; out              ;
+; |Interpolador|amostraIN0[1]       ; |Interpolador|amostraIN0[1]       ; out              ;
+; |Interpolador|amostraIN0[2]       ; |Interpolador|amostraIN0[2]       ; out              ;
+; |Interpolador|amostraIN0[3]       ; |Interpolador|amostraIN0[3]       ; out              ;
+; |Interpolador|amostraIN0[4]       ; |Interpolador|amostraIN0[4]       ; out              ;
+; |Interpolador|amostraIN0[5]       ; |Interpolador|amostraIN0[5]       ; out              ;
+; |Interpolador|amostraIN0[6]       ; |Interpolador|amostraIN0[6]       ; out              ;
+; |Interpolador|amostraIN0[7]       ; |Interpolador|amostraIN0[7]       ; out              ;
+; |Interpolador|amostraIN1[0]       ; |Interpolador|amostraIN1[0]       ; out              ;
+; |Interpolador|amostraIN1[1]       ; |Interpolador|amostraIN1[1]       ; out              ;
+; |Interpolador|amostraIN1[2]       ; |Interpolador|amostraIN1[2]       ; out              ;
+; |Interpolador|amostraIN1[3]       ; |Interpolador|amostraIN1[3]       ; out              ;
+; |Interpolador|amostraIN1[4]       ; |Interpolador|amostraIN1[4]       ; out              ;
+; |Interpolador|amostraIN1[5]       ; |Interpolador|amostraIN1[5]       ; out              ;
+; |Interpolador|amostraIN1[6]       ; |Interpolador|amostraIN1[6]       ; out              ;
+; |Interpolador|amostraIN1[7]       ; |Interpolador|amostraIN1[7]       ; out              ;
+; |Interpolador|amostraIN2[0]       ; |Interpolador|amostraIN2[0]       ; out              ;
+; |Interpolador|amostraIN2[1]       ; |Interpolador|amostraIN2[1]       ; out              ;
+; |Interpolador|amostraIN2[2]       ; |Interpolador|amostraIN2[2]       ; out              ;
+; |Interpolador|amostraIN2[3]       ; |Interpolador|amostraIN2[3]       ; out              ;
+; |Interpolador|amostraIN2[4]       ; |Interpolador|amostraIN2[4]       ; out              ;
+; |Interpolador|amostraIN2[5]       ; |Interpolador|amostraIN2[5]       ; out              ;
+; |Interpolador|amostraIN3[0]       ; |Interpolador|amostraIN3[0]       ; out              ;
+; |Interpolador|amostraIN3[1]       ; |Interpolador|amostraIN3[1]       ; out              ;
+; |Interpolador|amostraIN3[2]       ; |Interpolador|amostraIN3[2]       ; out              ;
+; |Interpolador|amostraIN3[3]       ; |Interpolador|amostraIN3[3]       ; out              ;
+; |Interpolador|amostraIN3[4]       ; |Interpolador|amostraIN3[4]       ; out              ;
+; |Interpolador|amostraIN3[5]       ; |Interpolador|amostraIN3[5]       ; out              ;
+; |Interpolador|amostraIN4[0]       ; |Interpolador|amostraIN4[0]       ; out              ;
+; |Interpolador|amostraIN4[1]       ; |Interpolador|amostraIN4[1]       ; out              ;
+; |Interpolador|amostraIN4[2]       ; |Interpolador|amostraIN4[2]       ; out              ;
+; |Interpolador|amostraIN4[3]       ; |Interpolador|amostraIN4[3]       ; out              ;
+; |Interpolador|amostraIN4[4]       ; |Interpolador|amostraIN4[4]       ; out              ;
+; |Interpolador|amostraIN4[5]       ; |Interpolador|amostraIN4[5]       ; out              ;
+; |Interpolador|amostraIN4[6]       ; |Interpolador|amostraIN4[6]       ; out              ;
+; |Interpolador|amostraIN4[7]       ; |Interpolador|amostraIN4[7]       ; out              ;
+; |Interpolador|amostraIN5[0]       ; |Interpolador|amostraIN5[0]       ; out              ;
+; |Interpolador|amostraIN5[1]       ; |Interpolador|amostraIN5[1]       ; out              ;
+; |Interpolador|amostraIN5[2]       ; |Interpolador|amostraIN5[2]       ; out              ;
+; |Interpolador|amostraIN5[3]       ; |Interpolador|amostraIN5[3]       ; out              ;
+; |Interpolador|amostraIN5[4]       ; |Interpolador|amostraIN5[4]       ; out              ;
+; |Interpolador|amostraIN5[5]       ; |Interpolador|amostraIN5[5]       ; out              ;
+; |Interpolador|amostraIN5[6]       ; |Interpolador|amostraIN5[6]       ; out              ;
+; |Interpolador|amostraIN5[7]       ; |Interpolador|amostraIN5[7]       ; out              ;
+; |Interpolador|amostraOUT[0]       ; |Interpolador|amostraOUT[0]       ; pin_out          ;
+; |Interpolador|amostraOUT[1]       ; |Interpolador|amostraOUT[1]       ; pin_out          ;
+; |Interpolador|amostraOUT[3]       ; |Interpolador|amostraOUT[3]       ; pin_out          ;
+; |Interpolador|amostraOUT[4]       ; |Interpolador|amostraOUT[4]       ; pin_out          ;
+; |Interpolador|amostraOUT[5]       ; |Interpolador|amostraOUT[5]       ; pin_out          ;
+; |Interpolador|amostraOUT[6]       ; |Interpolador|amostraOUT[6]       ; pin_out          ;
+; |Interpolador|amostraOUT[7]       ; |Interpolador|amostraOUT[7]       ; pin_out          ;
+; |Interpolador|amostraOUT2[2]      ; |Interpolador|amostraOUT2[2]      ; pin_out          ;
+; |Interpolador|amostraOUT2[3]      ; |Interpolador|amostraOUT2[3]      ; pin_out          ;
+; |Interpolador|amostraOUT2[4]      ; |Interpolador|amostraOUT2[4]      ; pin_out          ;
+; |Interpolador|amostraOUT2[5]      ; |Interpolador|amostraOUT2[5]      ; pin_out          ;
+; |Interpolador|amostraOUT2[6]      ; |Interpolador|amostraOUT2[6]      ; pin_out          ;
+; |Interpolador|amostraOUT2[7]      ; |Interpolador|amostraOUT2[7]      ; pin_out          ;
+; |Interpolador|endereco[5]         ; |Interpolador|endereco[5]         ; pin_out          ;
+; |Interpolador|endereco[6]         ; |Interpolador|endereco[6]         ; pin_out          ;
+; |Interpolador|endereco[7]         ; |Interpolador|endereco[7]         ; pin_out          ;
+; |Interpolador|endereco[8]         ; |Interpolador|endereco[8]         ; pin_out          ;
+; |Interpolador|endereco[9]         ; |Interpolador|endereco[9]         ; pin_out          ;
+; |Interpolador|Add2~0              ; |Interpolador|Add2~0              ; out0             ;
+; |Interpolador|Add2~1              ; |Interpolador|Add2~1              ; out0             ;
+; |Interpolador|Add2~2              ; |Interpolador|Add2~2              ; out0             ;
+; |Interpolador|Add2~3              ; |Interpolador|Add2~3              ; out0             ;
+; |Interpolador|Add2~4              ; |Interpolador|Add2~4              ; out0             ;
+; |Interpolador|Add2~5              ; |Interpolador|Add2~5              ; out0             ;
+; |Interpolador|Add2~6              ; |Interpolador|Add2~6              ; out0             ;
+; |Interpolador|Add2~7              ; |Interpolador|Add2~7              ; out0             ;
+; |Interpolador|Add2~8              ; |Interpolador|Add2~8              ; out0             ;
+; |Interpolador|Add2~9              ; |Interpolador|Add2~9              ; out0             ;
+; |Interpolador|Add2~10             ; |Interpolador|Add2~10             ; out0             ;
+; |Interpolador|Add2~11             ; |Interpolador|Add2~11             ; out0             ;
+; |Interpolador|Add2~12             ; |Interpolador|Add2~12             ; out0             ;
+; |Interpolador|Add2~13             ; |Interpolador|Add2~13             ; out0             ;
+; |Interpolador|Add2~14             ; |Interpolador|Add2~14             ; out0             ;
+; |Interpolador|Add2~15             ; |Interpolador|Add2~15             ; out0             ;
+; |Interpolador|Add2~16             ; |Interpolador|Add2~16             ; out0             ;
+; |Interpolador|Add2~17             ; |Interpolador|Add2~17             ; out0             ;
+; |Interpolador|Add2~18             ; |Interpolador|Add2~18             ; out0             ;
+; |Interpolador|Add2~19             ; |Interpolador|Add2~19             ; out0             ;
+; |Interpolador|Add2~20             ; |Interpolador|Add2~20             ; out0             ;
+; |Interpolador|Add2~21             ; |Interpolador|Add2~21             ; out0             ;
+; |Interpolador|Add2~22             ; |Interpolador|Add2~22             ; out0             ;
+; |Interpolador|Add3~0              ; |Interpolador|Add3~0              ; out0             ;
+; |Interpolador|Add3~1              ; |Interpolador|Add3~1              ; out0             ;
+; |Interpolador|Add3~2              ; |Interpolador|Add3~2              ; out0             ;
+; |Interpolador|Add3~3              ; |Interpolador|Add3~3              ; out0             ;
+; |Interpolador|Add3~4              ; |Interpolador|Add3~4              ; out0             ;
+; |Interpolador|Add3~5              ; |Interpolador|Add3~5              ; out0             ;
+; |Interpolador|Add3~6              ; |Interpolador|Add3~6              ; out0             ;
+; |Interpolador|Add3~7              ; |Interpolador|Add3~7              ; out0             ;
+; |Interpolador|Add3~8              ; |Interpolador|Add3~8              ; out0             ;
+; |Interpolador|Add3~9              ; |Interpolador|Add3~9              ; out0             ;
+; |Interpolador|Add3~10             ; |Interpolador|Add3~10             ; out0             ;
+; |Interpolador|Add3~11             ; |Interpolador|Add3~11             ; out0             ;
+; |Interpolador|Add3~12             ; |Interpolador|Add3~12             ; out0             ;
+; |Interpolador|Add4~0              ; |Interpolador|Add4~0              ; out0             ;
+; |Interpolador|Add4~1              ; |Interpolador|Add4~1              ; out0             ;
+; |Interpolador|Add4~2              ; |Interpolador|Add4~2              ; out0             ;
+; |Interpolador|Add4~3              ; |Interpolador|Add4~3              ; out0             ;
+; |Interpolador|Add4~4              ; |Interpolador|Add4~4              ; out0             ;
+; |Interpolador|Add4~5              ; |Interpolador|Add4~5              ; out0             ;
+; |Interpolador|Add4~6              ; |Interpolador|Add4~6              ; out0             ;
+; |Interpolador|Add4~7              ; |Interpolador|Add4~7              ; out0             ;
+; |Interpolador|Add4~8              ; |Interpolador|Add4~8              ; out0             ;
+; |Interpolador|Add4~9              ; |Interpolador|Add4~9              ; out0             ;
+; |Interpolador|Add4~10             ; |Interpolador|Add4~10             ; out0             ;
+; |Interpolador|Add4~11             ; |Interpolador|Add4~11             ; out0             ;
+; |Interpolador|Add4~12             ; |Interpolador|Add4~12             ; out0             ;
+; |Interpolador|Add5~0              ; |Interpolador|Add5~0              ; out0             ;
+; |Interpolador|Add5~1              ; |Interpolador|Add5~1              ; out0             ;
+; |Interpolador|Add5~2              ; |Interpolador|Add5~2              ; out0             ;
+; |Interpolador|Add5~3              ; |Interpolador|Add5~3              ; out0             ;
+; |Interpolador|Add5~4              ; |Interpolador|Add5~4              ; out0             ;
+; |Interpolador|Add5~5              ; |Interpolador|Add5~5              ; out0             ;
+; |Interpolador|Add5~6              ; |Interpolador|Add5~6              ; out0             ;
+; |Interpolador|Add5~7              ; |Interpolador|Add5~7              ; out0             ;
+; |Interpolador|Add5~8              ; |Interpolador|Add5~8              ; out0             ;
+; |Interpolador|Add5~9              ; |Interpolador|Add5~9              ; out0             ;
+; |Interpolador|Add5~10             ; |Interpolador|Add5~10             ; out0             ;
+; |Interpolador|Add5~11             ; |Interpolador|Add5~11             ; out0             ;
+; |Interpolador|Add5~12             ; |Interpolador|Add5~12             ; out0             ;
+; |Interpolador|Add5~13             ; |Interpolador|Add5~13             ; out0             ;
+; |Interpolador|Add5~14             ; |Interpolador|Add5~14             ; out0             ;
+; |Interpolador|Add5~15             ; |Interpolador|Add5~15             ; out0             ;
+; |Interpolador|Add5~16             ; |Interpolador|Add5~16             ; out0             ;
+; |Interpolador|Add5~17             ; |Interpolador|Add5~17             ; out0             ;
+; |Interpolador|Add5~18             ; |Interpolador|Add5~18             ; out0             ;
+; |Interpolador|Add5~19             ; |Interpolador|Add5~19             ; out0             ;
+; |Interpolador|Add5~20             ; |Interpolador|Add5~20             ; out0             ;
+; |Interpolador|Add5~21             ; |Interpolador|Add5~21             ; out0             ;
+; |Interpolador|Add5~22             ; |Interpolador|Add5~22             ; out0             ;
+; |Interpolador|Add6~1              ; |Interpolador|Add6~1              ; out0             ;
+; |Interpolador|Add6~2              ; |Interpolador|Add6~2              ; out0             ;
+; |Interpolador|Add6~3              ; |Interpolador|Add6~3              ; out0             ;
+; |Interpolador|Add6~4              ; |Interpolador|Add6~4              ; out0             ;
+; |Interpolador|Add6~5              ; |Interpolador|Add6~5              ; out0             ;
+; |Interpolador|Add6~6              ; |Interpolador|Add6~6              ; out0             ;
+; |Interpolador|Add6~7              ; |Interpolador|Add6~7              ; out0             ;
+; |Interpolador|Add6~9              ; |Interpolador|Add6~9              ; out0             ;
+; |Interpolador|Add6~11             ; |Interpolador|Add6~11             ; out0             ;
+; |Interpolador|Add6~12             ; |Interpolador|Add6~12             ; out0             ;
+; |Interpolador|Add6~14             ; |Interpolador|Add6~14             ; out0             ;
+; |Interpolador|Add6~15             ; |Interpolador|Add6~15             ; out0             ;
+; |Interpolador|Add6~16             ; |Interpolador|Add6~16             ; out0             ;
+; |Interpolador|Add6~17             ; |Interpolador|Add6~17             ; out0             ;
+; |Interpolador|Add6~19             ; |Interpolador|Add6~19             ; out0             ;
+; |Interpolador|Add6~20             ; |Interpolador|Add6~20             ; out0             ;
+; |Interpolador|Add6~21             ; |Interpolador|Add6~21             ; out0             ;
+; |Interpolador|Add6~22             ; |Interpolador|Add6~22             ; out0             ;
+; |Interpolador|Add6~24             ; |Interpolador|Add6~24             ; out0             ;
+; |Interpolador|Add6~25             ; |Interpolador|Add6~25             ; out0             ;
+; |Interpolador|Add6~26             ; |Interpolador|Add6~26             ; out0             ;
+; |Interpolador|Add6~27             ; |Interpolador|Add6~27             ; out0             ;
+; |Interpolador|Add6~29             ; |Interpolador|Add6~29             ; out0             ;
+; |Interpolador|Add6~30             ; |Interpolador|Add6~30             ; out0             ;
+; |Interpolador|Add6~31             ; |Interpolador|Add6~31             ; out0             ;
+; |Interpolador|Add6~32             ; |Interpolador|Add6~32             ; out0             ;
+; |Interpolador|Add7~1              ; |Interpolador|Add7~1              ; out0             ;
+; |Interpolador|Add7~2              ; |Interpolador|Add7~2              ; out0             ;
+; |Interpolador|Add7~3              ; |Interpolador|Add7~3              ; out0             ;
+; |Interpolador|Add7~4              ; |Interpolador|Add7~4              ; out0             ;
+; |Interpolador|Add7~5              ; |Interpolador|Add7~5              ; out0             ;
+; |Interpolador|Add7~6              ; |Interpolador|Add7~6              ; out0             ;
+; |Interpolador|Add7~9              ; |Interpolador|Add7~9              ; out0             ;
+; |Interpolador|Add7~11             ; |Interpolador|Add7~11             ; out0             ;
+; |Interpolador|Add7~14             ; |Interpolador|Add7~14             ; out0             ;
+; |Interpolador|Add7~27             ; |Interpolador|Add7~27             ; out0             ;
+; |Interpolador|Add7~30             ; |Interpolador|Add7~30             ; out0             ;
+; |Interpolador|Add7~31             ; |Interpolador|Add7~31             ; out0             ;
+; |Interpolador|Add7~32             ; |Interpolador|Add7~32             ; out0             ;
+; |Interpolador|Add8~1              ; |Interpolador|Add8~1              ; out0             ;
+; |Interpolador|Add8~2              ; |Interpolador|Add8~2              ; out0             ;
+; |Interpolador|Add8~3              ; |Interpolador|Add8~3              ; out0             ;
+; |Interpolador|Add8~4              ; |Interpolador|Add8~4              ; out0             ;
+; |Interpolador|Add8~5              ; |Interpolador|Add8~5              ; out0             ;
+; |Interpolador|Add8~6              ; |Interpolador|Add8~6              ; out0             ;
+; |Interpolador|Add8~9              ; |Interpolador|Add8~9              ; out0             ;
+; |Interpolador|Add8~11             ; |Interpolador|Add8~11             ; out0             ;
+; |Interpolador|Add8~14             ; |Interpolador|Add8~14             ; out0             ;
+; |Interpolador|Add8~28             ; |Interpolador|Add8~28             ; out0             ;
+; |Interpolador|Add8~29             ; |Interpolador|Add8~29             ; out0             ;
+; |Interpolador|Add8~30             ; |Interpolador|Add8~30             ; out0             ;
+; |Interpolador|Add8~31             ; |Interpolador|Add8~31             ; out0             ;
+; |Interpolador|Add8~32             ; |Interpolador|Add8~32             ; out0             ;
+; |Interpolador|Add9~2              ; |Interpolador|Add9~2              ; out0             ;
+; |Interpolador|Add9~4              ; |Interpolador|Add9~4              ; out0             ;
+; |Interpolador|Add9~5              ; |Interpolador|Add9~5              ; out0             ;
+; |Interpolador|Add9~6              ; |Interpolador|Add9~6              ; out0             ;
+; |Interpolador|Add9~7              ; |Interpolador|Add9~7              ; out0             ;
+; |Interpolador|Add9~9              ; |Interpolador|Add9~9              ; out0             ;
+; |Interpolador|Add9~10             ; |Interpolador|Add9~10             ; out0             ;
+; |Interpolador|Add9~11             ; |Interpolador|Add9~11             ; out0             ;
+; |Interpolador|Add9~12             ; |Interpolador|Add9~12             ; out0             ;
+; |Interpolador|Add9~14             ; |Interpolador|Add9~14             ; out0             ;
+; |Interpolador|Add9~15             ; |Interpolador|Add9~15             ; out0             ;
+; |Interpolador|Add9~16             ; |Interpolador|Add9~16             ; out0             ;
+; |Interpolador|Add9~17             ; |Interpolador|Add9~17             ; out0             ;
+; |Interpolador|Add9~20             ; |Interpolador|Add9~20             ; out0             ;
+; |Interpolador|Add9~22             ; |Interpolador|Add9~22             ; out0             ;
+; |Interpolador|Add9~24             ; |Interpolador|Add9~24             ; out0             ;
+; |Interpolador|Add9~29             ; |Interpolador|Add9~29             ; out0             ;
+; |Interpolador|Add9~32             ; |Interpolador|Add9~32             ; out0             ;
+; |Interpolador|Add9~33             ; |Interpolador|Add9~33             ; out0             ;
+; |Interpolador|Add10~0             ; |Interpolador|Add10~0             ; out0             ;
+; |Interpolador|Add10~2             ; |Interpolador|Add10~2             ; out0             ;
+; |Interpolador|Add10~4             ; |Interpolador|Add10~4             ; out0             ;
+; |Interpolador|Add10~7             ; |Interpolador|Add10~7             ; out0             ;
+; |Interpolador|Add10~8             ; |Interpolador|Add10~8             ; out0             ;
+; |Interpolador|Add10~11            ; |Interpolador|Add10~11            ; out0             ;
+; |Interpolador|Add10~12            ; |Interpolador|Add10~12            ; out0             ;
+; |Interpolador|Add10~15            ; |Interpolador|Add10~15            ; out0             ;
+; |Interpolador|Add10~16            ; |Interpolador|Add10~16            ; out0             ;
+; |Interpolador|Add10~18            ; |Interpolador|Add10~18            ; out0             ;
+; |Interpolador|Add10~19            ; |Interpolador|Add10~19            ; out0             ;
+; |Interpolador|Add10~20            ; |Interpolador|Add10~20            ; out0             ;
+; |Interpolador|Add10~21            ; |Interpolador|Add10~21            ; out0             ;
+; |Interpolador|Add10~23            ; |Interpolador|Add10~23            ; out0             ;
+; |Interpolador|Add10~24            ; |Interpolador|Add10~24            ; out0             ;
+; |Interpolador|Add10~25            ; |Interpolador|Add10~25            ; out0             ;
+; |Interpolador|Add10~26            ; |Interpolador|Add10~26            ; out0             ;
+; |Interpolador|Add10~27            ; |Interpolador|Add10~27            ; out0             ;
+; |Interpolador|Add11~9             ; |Interpolador|Add11~9             ; out0             ;
+; |Interpolador|Add11~10            ; |Interpolador|Add11~10            ; out0             ;
+; |Interpolador|Add11~11            ; |Interpolador|Add11~11            ; out0             ;
+; |Interpolador|Add11~12            ; |Interpolador|Add11~12            ; out0             ;
+; |Interpolador|Add11~13            ; |Interpolador|Add11~13            ; out0             ;
+; |Interpolador|Add11~14            ; |Interpolador|Add11~14            ; out0             ;
+; |Interpolador|Add11~15            ; |Interpolador|Add11~15            ; out0             ;
+; |Interpolador|Add11~16            ; |Interpolador|Add11~16            ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Interpolador|auxEndereco[7]      ; |Interpolador|auxEndereco[7]      ; regout           ;
+; |Interpolador|auxEndereco[6]      ; |Interpolador|auxEndereco[6]      ; regout           ;
+; |Interpolador|auxEndereco[5]      ; |Interpolador|auxEndereco[5]      ; regout           ;
+; |Interpolador|EE~0                ; |Interpolador|EE~0                ; out              ;
+; |Interpolador|EE~1                ; |Interpolador|EE~1                ; out              ;
+; |Interpolador|EE~2                ; |Interpolador|EE~2                ; out              ;
+; |Interpolador|EE~3                ; |Interpolador|EE~3                ; out              ;
+; |Interpolador|EE~4                ; |Interpolador|EE~4                ; out              ;
+; |Interpolador|EE~5                ; |Interpolador|EE~5                ; out              ;
+; |Interpolador|EE~6                ; |Interpolador|EE~6                ; out              ;
+; |Interpolador|EE~7                ; |Interpolador|EE~7                ; out              ;
+; |Interpolador|FF~0                ; |Interpolador|FF~0                ; out              ;
+; |Interpolador|FF~1                ; |Interpolador|FF~1                ; out              ;
+; |Interpolador|FF~2                ; |Interpolador|FF~2                ; out              ;
+; |Interpolador|FF~3                ; |Interpolador|FF~3                ; out              ;
+; |Interpolador|FF~4                ; |Interpolador|FF~4                ; out              ;
+; |Interpolador|FF~5                ; |Interpolador|FF~5                ; out              ;
+; |Interpolador|FF~6                ; |Interpolador|FF~6                ; out              ;
+; |Interpolador|FF~7                ; |Interpolador|FF~7                ; out              ;
+; |Interpolador|GG~0                ; |Interpolador|GG~0                ; out              ;
+; |Interpolador|GG~1                ; |Interpolador|GG~1                ; out              ;
+; |Interpolador|GG~2                ; |Interpolador|GG~2                ; out              ;
+; |Interpolador|GG~3                ; |Interpolador|GG~3                ; out              ;
+; |Interpolador|GG~4                ; |Interpolador|GG~4                ; out              ;
+; |Interpolador|GG~5                ; |Interpolador|GG~5                ; out              ;
+; |Interpolador|GG~6                ; |Interpolador|GG~6                ; out              ;
+; |Interpolador|GG~7                ; |Interpolador|GG~7                ; out              ;
+; |Interpolador|HH~0                ; |Interpolador|HH~0                ; out              ;
+; |Interpolador|HH~1                ; |Interpolador|HH~1                ; out              ;
+; |Interpolador|HH~2                ; |Interpolador|HH~2                ; out              ;
+; |Interpolador|HH~3                ; |Interpolador|HH~3                ; out              ;
+; |Interpolador|HH~4                ; |Interpolador|HH~4                ; out              ;
+; |Interpolador|HH~5                ; |Interpolador|HH~5                ; out              ;
+; |Interpolador|HH~6                ; |Interpolador|HH~6                ; out              ;
+; |Interpolador|HH~7                ; |Interpolador|HH~7                ; out              ;
+; |Interpolador|II~0                ; |Interpolador|II~0                ; out              ;
+; |Interpolador|II~1                ; |Interpolador|II~1                ; out              ;
+; |Interpolador|II~2                ; |Interpolador|II~2                ; out              ;
+; |Interpolador|II~3                ; |Interpolador|II~3                ; out              ;
+; |Interpolador|II~4                ; |Interpolador|II~4                ; out              ;
+; |Interpolador|II~5                ; |Interpolador|II~5                ; out              ;
+; |Interpolador|II~6                ; |Interpolador|II~6                ; out              ;
+; |Interpolador|II~7                ; |Interpolador|II~7                ; out              ;
+; |Interpolador|JJ~0                ; |Interpolador|JJ~0                ; out              ;
+; |Interpolador|JJ~1                ; |Interpolador|JJ~1                ; out              ;
+; |Interpolador|JJ~2                ; |Interpolador|JJ~2                ; out              ;
+; |Interpolador|JJ~3                ; |Interpolador|JJ~3                ; out              ;
+; |Interpolador|JJ~4                ; |Interpolador|JJ~4                ; out              ;
+; |Interpolador|JJ~5                ; |Interpolador|JJ~5                ; out              ;
+; |Interpolador|JJ~6                ; |Interpolador|JJ~6                ; out              ;
+; |Interpolador|JJ~7                ; |Interpolador|JJ~7                ; out              ;
+; |Interpolador|amostraOUT~0        ; |Interpolador|amostraOUT~0        ; out              ;
+; |Interpolador|amostraOUT~1        ; |Interpolador|amostraOUT~1        ; out              ;
+; |Interpolador|amostraOUT~2        ; |Interpolador|amostraOUT~2        ; out              ;
+; |Interpolador|amostraOUT~3        ; |Interpolador|amostraOUT~3        ; out              ;
+; |Interpolador|amostraOUT~4        ; |Interpolador|amostraOUT~4        ; out              ;
+; |Interpolador|amostraOUT~5        ; |Interpolador|amostraOUT~5        ; out              ;
+; |Interpolador|amostraOUT~6        ; |Interpolador|amostraOUT~6        ; out              ;
+; |Interpolador|amostraOUT~7        ; |Interpolador|amostraOUT~7        ; out              ;
+; |Interpolador|aux~0               ; |Interpolador|aux~0               ; out              ;
+; |Interpolador|aux~1               ; |Interpolador|aux~1               ; out              ;
+; |Interpolador|amostraOUT2~0       ; |Interpolador|amostraOUT2~0       ; out              ;
+; |Interpolador|amostraOUT2~1       ; |Interpolador|amostraOUT2~1       ; out              ;
+; |Interpolador|amostraOUT2~2       ; |Interpolador|amostraOUT2~2       ; out              ;
+; |Interpolador|amostraOUT2~3       ; |Interpolador|amostraOUT2~3       ; out              ;
+; |Interpolador|amostraOUT2~4       ; |Interpolador|amostraOUT2~4       ; out              ;
+; |Interpolador|amostraOUT2~5       ; |Interpolador|amostraOUT2~5       ; out              ;
+; |Interpolador|amostraOUT2~6       ; |Interpolador|amostraOUT2~6       ; out              ;
+; |Interpolador|amostraOUT2~7       ; |Interpolador|amostraOUT2~7       ; out              ;
+; |Interpolador|auxEndereco~0       ; |Interpolador|auxEndereco~0       ; out              ;
+; |Interpolador|auxEndereco~1       ; |Interpolador|auxEndereco~1       ; out              ;
+; |Interpolador|auxEndereco~2       ; |Interpolador|auxEndereco~2       ; out              ;
+; |Interpolador|auxEndereco~3       ; |Interpolador|auxEndereco~3       ; out              ;
+; |Interpolador|auxEndereco[8]      ; |Interpolador|auxEndereco[8]      ; regout           ;
+; |Interpolador|auxEndereco[9]      ; |Interpolador|auxEndereco[9]      ; regout           ;
+; |Interpolador|amostraOUT2[0]~reg0 ; |Interpolador|amostraOUT2[0]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[1]~reg0 ; |Interpolador|amostraOUT2[1]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[2]~reg0 ; |Interpolador|amostraOUT2[2]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[3]~reg0 ; |Interpolador|amostraOUT2[3]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[4]~reg0 ; |Interpolador|amostraOUT2[4]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[5]~reg0 ; |Interpolador|amostraOUT2[5]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[6]~reg0 ; |Interpolador|amostraOUT2[6]~reg0 ; regout           ;
+; |Interpolador|amostraOUT2[7]~reg0 ; |Interpolador|amostraOUT2[7]~reg0 ; regout           ;
+; |Interpolador|aux[5]              ; |Interpolador|aux[5]              ; regout           ;
+; |Interpolador|aux[6]              ; |Interpolador|aux[6]              ; regout           ;
+; |Interpolador|aux[7]              ; |Interpolador|aux[7]              ; regout           ;
+; |Interpolador|amostraOUT[0]~reg0  ; |Interpolador|amostraOUT[0]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[1]~reg0  ; |Interpolador|amostraOUT[1]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[2]~reg0  ; |Interpolador|amostraOUT[2]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[3]~reg0  ; |Interpolador|amostraOUT[3]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[4]~reg0  ; |Interpolador|amostraOUT[4]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[5]~reg0  ; |Interpolador|amostraOUT[5]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[6]~reg0  ; |Interpolador|amostraOUT[6]~reg0  ; regout           ;
+; |Interpolador|amostraOUT[7]~reg0  ; |Interpolador|amostraOUT[7]~reg0  ; regout           ;
+; |Interpolador|JJ[0]               ; |Interpolador|JJ[0]               ; regout           ;
+; |Interpolador|JJ[1]               ; |Interpolador|JJ[1]               ; regout           ;
+; |Interpolador|JJ[2]               ; |Interpolador|JJ[2]               ; regout           ;
+; |Interpolador|JJ[3]               ; |Interpolador|JJ[3]               ; regout           ;
+; |Interpolador|JJ[4]               ; |Interpolador|JJ[4]               ; regout           ;
+; |Interpolador|JJ[5]               ; |Interpolador|JJ[5]               ; regout           ;
+; |Interpolador|JJ[6]               ; |Interpolador|JJ[6]               ; regout           ;
+; |Interpolador|JJ[7]               ; |Interpolador|JJ[7]               ; regout           ;
+; |Interpolador|II[0]               ; |Interpolador|II[0]               ; regout           ;
+; |Interpolador|II[1]               ; |Interpolador|II[1]               ; regout           ;
+; |Interpolador|II[2]               ; |Interpolador|II[2]               ; regout           ;
+; |Interpolador|II[3]               ; |Interpolador|II[3]               ; regout           ;
+; |Interpolador|II[4]               ; |Interpolador|II[4]               ; regout           ;
+; |Interpolador|II[5]               ; |Interpolador|II[5]               ; regout           ;
+; |Interpolador|II[6]               ; |Interpolador|II[6]               ; regout           ;
+; |Interpolador|II[7]               ; |Interpolador|II[7]               ; regout           ;
+; |Interpolador|HH[0]               ; |Interpolador|HH[0]               ; regout           ;
+; |Interpolador|HH[1]               ; |Interpolador|HH[1]               ; regout           ;
+; |Interpolador|HH[2]               ; |Interpolador|HH[2]               ; regout           ;
+; |Interpolador|HH[3]               ; |Interpolador|HH[3]               ; regout           ;
+; |Interpolador|HH[4]               ; |Interpolador|HH[4]               ; regout           ;
+; |Interpolador|HH[5]               ; |Interpolador|HH[5]               ; regout           ;
+; |Interpolador|HH[6]               ; |Interpolador|HH[6]               ; regout           ;
+; |Interpolador|HH[7]               ; |Interpolador|HH[7]               ; regout           ;
+; |Interpolador|GG[0]               ; |Interpolador|GG[0]               ; regout           ;
+; |Interpolador|GG[1]               ; |Interpolador|GG[1]               ; regout           ;
+; |Interpolador|GG[2]               ; |Interpolador|GG[2]               ; regout           ;
+; |Interpolador|GG[3]               ; |Interpolador|GG[3]               ; regout           ;
+; |Interpolador|GG[4]               ; |Interpolador|GG[4]               ; regout           ;
+; |Interpolador|GG[5]               ; |Interpolador|GG[5]               ; regout           ;
+; |Interpolador|GG[6]               ; |Interpolador|GG[6]               ; regout           ;
+; |Interpolador|GG[7]               ; |Interpolador|GG[7]               ; regout           ;
+; |Interpolador|FF[0]               ; |Interpolador|FF[0]               ; regout           ;
+; |Interpolador|FF[1]               ; |Interpolador|FF[1]               ; regout           ;
+; |Interpolador|FF[2]               ; |Interpolador|FF[2]               ; regout           ;
+; |Interpolador|FF[3]               ; |Interpolador|FF[3]               ; regout           ;
+; |Interpolador|FF[4]               ; |Interpolador|FF[4]               ; regout           ;
+; |Interpolador|FF[5]               ; |Interpolador|FF[5]               ; regout           ;
+; |Interpolador|FF[6]               ; |Interpolador|FF[6]               ; regout           ;
+; |Interpolador|FF[7]               ; |Interpolador|FF[7]               ; regout           ;
+; |Interpolador|EE[0]               ; |Interpolador|EE[0]               ; regout           ;
+; |Interpolador|EE[1]               ; |Interpolador|EE[1]               ; regout           ;
+; |Interpolador|EE[2]               ; |Interpolador|EE[2]               ; regout           ;
+; |Interpolador|EE[3]               ; |Interpolador|EE[3]               ; regout           ;
+; |Interpolador|EE[4]               ; |Interpolador|EE[4]               ; regout           ;
+; |Interpolador|EE[5]               ; |Interpolador|EE[5]               ; regout           ;
+; |Interpolador|EE[6]               ; |Interpolador|EE[6]               ; regout           ;
+; |Interpolador|EE[7]               ; |Interpolador|EE[7]               ; regout           ;
+; |Interpolador|endereco[5]~reg0    ; |Interpolador|endereco[5]~reg0    ; regout           ;
+; |Interpolador|endereco[6]~reg0    ; |Interpolador|endereco[6]~reg0    ; regout           ;
+; |Interpolador|endereco[7]~reg0    ; |Interpolador|endereco[7]~reg0    ; regout           ;
+; |Interpolador|endereco[8]~reg0    ; |Interpolador|endereco[8]~reg0    ; regout           ;
+; |Interpolador|endereco[9]~reg0    ; |Interpolador|endereco[9]~reg0    ; regout           ;
+; |Interpolador|amostraIN0[0]       ; |Interpolador|amostraIN0[0]       ; out              ;
+; |Interpolador|amostraIN0[1]       ; |Interpolador|amostraIN0[1]       ; out              ;
+; |Interpolador|amostraIN0[2]       ; |Interpolador|amostraIN0[2]       ; out              ;
+; |Interpolador|amostraIN0[3]       ; |Interpolador|amostraIN0[3]       ; out              ;
+; |Interpolador|amostraIN0[4]       ; |Interpolador|amostraIN0[4]       ; out              ;
+; |Interpolador|amostraIN0[5]       ; |Interpolador|amostraIN0[5]       ; out              ;
+; |Interpolador|amostraIN0[6]       ; |Interpolador|amostraIN0[6]       ; out              ;
+; |Interpolador|amostraIN0[7]       ; |Interpolador|amostraIN0[7]       ; out              ;
+; |Interpolador|amostraIN1[0]       ; |Interpolador|amostraIN1[0]       ; out              ;
+; |Interpolador|amostraIN1[1]       ; |Interpolador|amostraIN1[1]       ; out              ;
+; |Interpolador|amostraIN1[2]       ; |Interpolador|amostraIN1[2]       ; out              ;
+; |Interpolador|amostraIN1[3]       ; |Interpolador|amostraIN1[3]       ; out              ;
+; |Interpolador|amostraIN1[4]       ; |Interpolador|amostraIN1[4]       ; out              ;
+; |Interpolador|amostraIN1[5]       ; |Interpolador|amostraIN1[5]       ; out              ;
+; |Interpolador|amostraIN1[6]       ; |Interpolador|amostraIN1[6]       ; out              ;
+; |Interpolador|amostraIN1[7]       ; |Interpolador|amostraIN1[7]       ; out              ;
+; |Interpolador|amostraIN2[0]       ; |Interpolador|amostraIN2[0]       ; out              ;
+; |Interpolador|amostraIN2[1]       ; |Interpolador|amostraIN2[1]       ; out              ;
+; |Interpolador|amostraIN2[2]       ; |Interpolador|amostraIN2[2]       ; out              ;
+; |Interpolador|amostraIN2[3]       ; |Interpolador|amostraIN2[3]       ; out              ;
+; |Interpolador|amostraIN2[4]       ; |Interpolador|amostraIN2[4]       ; out              ;
+; |Interpolador|amostraIN2[5]       ; |Interpolador|amostraIN2[5]       ; out              ;
+; |Interpolador|amostraIN3[0]       ; |Interpolador|amostraIN3[0]       ; out              ;
+; |Interpolador|amostraIN3[1]       ; |Interpolador|amostraIN3[1]       ; out              ;
+; |Interpolador|amostraIN3[2]       ; |Interpolador|amostraIN3[2]       ; out              ;
+; |Interpolador|amostraIN3[3]       ; |Interpolador|amostraIN3[3]       ; out              ;
+; |Interpolador|amostraIN3[4]       ; |Interpolador|amostraIN3[4]       ; out              ;
+; |Interpolador|amostraIN3[5]       ; |Interpolador|amostraIN3[5]       ; out              ;
+; |Interpolador|amostraIN4[0]       ; |Interpolador|amostraIN4[0]       ; out              ;
+; |Interpolador|amostraIN4[1]       ; |Interpolador|amostraIN4[1]       ; out              ;
+; |Interpolador|amostraIN4[2]       ; |Interpolador|amostraIN4[2]       ; out              ;
+; |Interpolador|amostraIN4[3]       ; |Interpolador|amostraIN4[3]       ; out              ;
+; |Interpolador|amostraIN4[4]       ; |Interpolador|amostraIN4[4]       ; out              ;
+; |Interpolador|amostraIN4[5]       ; |Interpolador|amostraIN4[5]       ; out              ;
+; |Interpolador|amostraIN4[6]       ; |Interpolador|amostraIN4[6]       ; out              ;
+; |Interpolador|amostraIN4[7]       ; |Interpolador|amostraIN4[7]       ; out              ;
+; |Interpolador|amostraIN5[0]       ; |Interpolador|amostraIN5[0]       ; out              ;
+; |Interpolador|amostraIN5[1]       ; |Interpolador|amostraIN5[1]       ; out              ;
+; |Interpolador|amostraIN5[2]       ; |Interpolador|amostraIN5[2]       ; out              ;
+; |Interpolador|amostraIN5[3]       ; |Interpolador|amostraIN5[3]       ; out              ;
+; |Interpolador|amostraIN5[4]       ; |Interpolador|amostraIN5[4]       ; out              ;
+; |Interpolador|amostraIN5[5]       ; |Interpolador|amostraIN5[5]       ; out              ;
+; |Interpolador|amostraIN5[6]       ; |Interpolador|amostraIN5[6]       ; out              ;
+; |Interpolador|amostraIN5[7]       ; |Interpolador|amostraIN5[7]       ; out              ;
+; |Interpolador|amostraOUT[0]       ; |Interpolador|amostraOUT[0]       ; pin_out          ;
+; |Interpolador|amostraOUT[1]       ; |Interpolador|amostraOUT[1]       ; pin_out          ;
+; |Interpolador|amostraOUT[2]       ; |Interpolador|amostraOUT[2]       ; pin_out          ;
+; |Interpolador|amostraOUT[3]       ; |Interpolador|amostraOUT[3]       ; pin_out          ;
+; |Interpolador|amostraOUT[4]       ; |Interpolador|amostraOUT[4]       ; pin_out          ;
+; |Interpolador|amostraOUT[5]       ; |Interpolador|amostraOUT[5]       ; pin_out          ;
+; |Interpolador|amostraOUT[6]       ; |Interpolador|amostraOUT[6]       ; pin_out          ;
+; |Interpolador|amostraOUT[7]       ; |Interpolador|amostraOUT[7]       ; pin_out          ;
+; |Interpolador|amostraOUT2[0]      ; |Interpolador|amostraOUT2[0]      ; pin_out          ;
+; |Interpolador|amostraOUT2[1]      ; |Interpolador|amostraOUT2[1]      ; pin_out          ;
+; |Interpolador|amostraOUT2[2]      ; |Interpolador|amostraOUT2[2]      ; pin_out          ;
+; |Interpolador|amostraOUT2[3]      ; |Interpolador|amostraOUT2[3]      ; pin_out          ;
+; |Interpolador|amostraOUT2[4]      ; |Interpolador|amostraOUT2[4]      ; pin_out          ;
+; |Interpolador|amostraOUT2[5]      ; |Interpolador|amostraOUT2[5]      ; pin_out          ;
+; |Interpolador|amostraOUT2[6]      ; |Interpolador|amostraOUT2[6]      ; pin_out          ;
+; |Interpolador|amostraOUT2[7]      ; |Interpolador|amostraOUT2[7]      ; pin_out          ;
+; |Interpolador|endereco[5]         ; |Interpolador|endereco[5]         ; pin_out          ;
+; |Interpolador|endereco[6]         ; |Interpolador|endereco[6]         ; pin_out          ;
+; |Interpolador|endereco[7]         ; |Interpolador|endereco[7]         ; pin_out          ;
+; |Interpolador|endereco[8]         ; |Interpolador|endereco[8]         ; pin_out          ;
+; |Interpolador|endereco[9]         ; |Interpolador|endereco[9]         ; pin_out          ;
+; |Interpolador|Add2~0              ; |Interpolador|Add2~0              ; out0             ;
+; |Interpolador|Add2~1              ; |Interpolador|Add2~1              ; out0             ;
+; |Interpolador|Add2~2              ; |Interpolador|Add2~2              ; out0             ;
+; |Interpolador|Add2~3              ; |Interpolador|Add2~3              ; out0             ;
+; |Interpolador|Add2~4              ; |Interpolador|Add2~4              ; out0             ;
+; |Interpolador|Add2~5              ; |Interpolador|Add2~5              ; out0             ;
+; |Interpolador|Add2~6              ; |Interpolador|Add2~6              ; out0             ;
+; |Interpolador|Add2~7              ; |Interpolador|Add2~7              ; out0             ;
+; |Interpolador|Add2~8              ; |Interpolador|Add2~8              ; out0             ;
+; |Interpolador|Add2~9              ; |Interpolador|Add2~9              ; out0             ;
+; |Interpolador|Add2~10             ; |Interpolador|Add2~10             ; out0             ;
+; |Interpolador|Add2~11             ; |Interpolador|Add2~11             ; out0             ;
+; |Interpolador|Add2~12             ; |Interpolador|Add2~12             ; out0             ;
+; |Interpolador|Add2~13             ; |Interpolador|Add2~13             ; out0             ;
+; |Interpolador|Add2~14             ; |Interpolador|Add2~14             ; out0             ;
+; |Interpolador|Add2~15             ; |Interpolador|Add2~15             ; out0             ;
+; |Interpolador|Add2~16             ; |Interpolador|Add2~16             ; out0             ;
+; |Interpolador|Add2~17             ; |Interpolador|Add2~17             ; out0             ;
+; |Interpolador|Add2~18             ; |Interpolador|Add2~18             ; out0             ;
+; |Interpolador|Add2~19             ; |Interpolador|Add2~19             ; out0             ;
+; |Interpolador|Add2~20             ; |Interpolador|Add2~20             ; out0             ;
+; |Interpolador|Add2~21             ; |Interpolador|Add2~21             ; out0             ;
+; |Interpolador|Add2~22             ; |Interpolador|Add2~22             ; out0             ;
+; |Interpolador|Add3~0              ; |Interpolador|Add3~0              ; out0             ;
+; |Interpolador|Add3~1              ; |Interpolador|Add3~1              ; out0             ;
+; |Interpolador|Add3~2              ; |Interpolador|Add3~2              ; out0             ;
+; |Interpolador|Add3~3              ; |Interpolador|Add3~3              ; out0             ;
+; |Interpolador|Add3~4              ; |Interpolador|Add3~4              ; out0             ;
+; |Interpolador|Add3~5              ; |Interpolador|Add3~5              ; out0             ;
+; |Interpolador|Add3~6              ; |Interpolador|Add3~6              ; out0             ;
+; |Interpolador|Add3~7              ; |Interpolador|Add3~7              ; out0             ;
+; |Interpolador|Add3~8              ; |Interpolador|Add3~8              ; out0             ;
+; |Interpolador|Add3~9              ; |Interpolador|Add3~9              ; out0             ;
+; |Interpolador|Add3~10             ; |Interpolador|Add3~10             ; out0             ;
+; |Interpolador|Add3~11             ; |Interpolador|Add3~11             ; out0             ;
+; |Interpolador|Add3~12             ; |Interpolador|Add3~12             ; out0             ;
+; |Interpolador|Add4~0              ; |Interpolador|Add4~0              ; out0             ;
+; |Interpolador|Add4~1              ; |Interpolador|Add4~1              ; out0             ;
+; |Interpolador|Add4~2              ; |Interpolador|Add4~2              ; out0             ;
+; |Interpolador|Add4~3              ; |Interpolador|Add4~3              ; out0             ;
+; |Interpolador|Add4~4              ; |Interpolador|Add4~4              ; out0             ;
+; |Interpolador|Add4~5              ; |Interpolador|Add4~5              ; out0             ;
+; |Interpolador|Add4~6              ; |Interpolador|Add4~6              ; out0             ;
+; |Interpolador|Add4~7              ; |Interpolador|Add4~7              ; out0             ;
+; |Interpolador|Add4~8              ; |Interpolador|Add4~8              ; out0             ;
+; |Interpolador|Add4~9              ; |Interpolador|Add4~9              ; out0             ;
+; |Interpolador|Add4~10             ; |Interpolador|Add4~10             ; out0             ;
+; |Interpolador|Add4~11             ; |Interpolador|Add4~11             ; out0             ;
+; |Interpolador|Add4~12             ; |Interpolador|Add4~12             ; out0             ;
+; |Interpolador|Add5~0              ; |Interpolador|Add5~0              ; out0             ;
+; |Interpolador|Add5~1              ; |Interpolador|Add5~1              ; out0             ;
+; |Interpolador|Add5~2              ; |Interpolador|Add5~2              ; out0             ;
+; |Interpolador|Add5~3              ; |Interpolador|Add5~3              ; out0             ;
+; |Interpolador|Add5~4              ; |Interpolador|Add5~4              ; out0             ;
+; |Interpolador|Add5~5              ; |Interpolador|Add5~5              ; out0             ;
+; |Interpolador|Add5~6              ; |Interpolador|Add5~6              ; out0             ;
+; |Interpolador|Add5~7              ; |Interpolador|Add5~7              ; out0             ;
+; |Interpolador|Add5~8              ; |Interpolador|Add5~8              ; out0             ;
+; |Interpolador|Add5~9              ; |Interpolador|Add5~9              ; out0             ;
+; |Interpolador|Add5~10             ; |Interpolador|Add5~10             ; out0             ;
+; |Interpolador|Add5~11             ; |Interpolador|Add5~11             ; out0             ;
+; |Interpolador|Add5~12             ; |Interpolador|Add5~12             ; out0             ;
+; |Interpolador|Add5~13             ; |Interpolador|Add5~13             ; out0             ;
+; |Interpolador|Add5~14             ; |Interpolador|Add5~14             ; out0             ;
+; |Interpolador|Add5~15             ; |Interpolador|Add5~15             ; out0             ;
+; |Interpolador|Add5~16             ; |Interpolador|Add5~16             ; out0             ;
+; |Interpolador|Add5~17             ; |Interpolador|Add5~17             ; out0             ;
+; |Interpolador|Add5~18             ; |Interpolador|Add5~18             ; out0             ;
+; |Interpolador|Add5~19             ; |Interpolador|Add5~19             ; out0             ;
+; |Interpolador|Add5~20             ; |Interpolador|Add5~20             ; out0             ;
+; |Interpolador|Add5~21             ; |Interpolador|Add5~21             ; out0             ;
+; |Interpolador|Add5~22             ; |Interpolador|Add5~22             ; out0             ;
+; |Interpolador|Add6~0              ; |Interpolador|Add6~0              ; out0             ;
+; |Interpolador|Add6~2              ; |Interpolador|Add6~2              ; out0             ;
+; |Interpolador|Add6~3              ; |Interpolador|Add6~3              ; out0             ;
+; |Interpolador|Add6~5              ; |Interpolador|Add6~5              ; out0             ;
+; |Interpolador|Add6~6              ; |Interpolador|Add6~6              ; out0             ;
+; |Interpolador|Add6~8              ; |Interpolador|Add6~8              ; out0             ;
+; |Interpolador|Add6~11             ; |Interpolador|Add6~11             ; out0             ;
+; |Interpolador|Add6~15             ; |Interpolador|Add6~15             ; out0             ;
+; |Interpolador|Add6~16             ; |Interpolador|Add6~16             ; out0             ;
+; |Interpolador|Add6~18             ; |Interpolador|Add6~18             ; out0             ;
+; |Interpolador|Add6~20             ; |Interpolador|Add6~20             ; out0             ;
+; |Interpolador|Add6~21             ; |Interpolador|Add6~21             ; out0             ;
+; |Interpolador|Add6~23             ; |Interpolador|Add6~23             ; out0             ;
+; |Interpolador|Add6~25             ; |Interpolador|Add6~25             ; out0             ;
+; |Interpolador|Add6~26             ; |Interpolador|Add6~26             ; out0             ;
+; |Interpolador|Add6~28             ; |Interpolador|Add6~28             ; out0             ;
+; |Interpolador|Add6~30             ; |Interpolador|Add6~30             ; out0             ;
+; |Interpolador|Add6~31             ; |Interpolador|Add6~31             ; out0             ;
+; |Interpolador|Add6~33             ; |Interpolador|Add6~33             ; out0             ;
+; |Interpolador|Add7~0              ; |Interpolador|Add7~0              ; out0             ;
+; |Interpolador|Add7~1              ; |Interpolador|Add7~1              ; out0             ;
+; |Interpolador|Add7~2              ; |Interpolador|Add7~2              ; out0             ;
+; |Interpolador|Add7~3              ; |Interpolador|Add7~3              ; out0             ;
+; |Interpolador|Add7~4              ; |Interpolador|Add7~4              ; out0             ;
+; |Interpolador|Add7~5              ; |Interpolador|Add7~5              ; out0             ;
+; |Interpolador|Add7~6              ; |Interpolador|Add7~6              ; out0             ;
+; |Interpolador|Add7~8              ; |Interpolador|Add7~8              ; out0             ;
+; |Interpolador|Add7~9              ; |Interpolador|Add7~9              ; out0             ;
+; |Interpolador|Add7~10             ; |Interpolador|Add7~10             ; out0             ;
+; |Interpolador|Add7~11             ; |Interpolador|Add7~11             ; out0             ;
+; |Interpolador|Add7~13             ; |Interpolador|Add7~13             ; out0             ;
+; |Interpolador|Add7~14             ; |Interpolador|Add7~14             ; out0             ;
+; |Interpolador|Add7~16             ; |Interpolador|Add7~16             ; out0             ;
+; |Interpolador|Add7~17             ; |Interpolador|Add7~17             ; out0             ;
+; |Interpolador|Add7~18             ; |Interpolador|Add7~18             ; out0             ;
+; |Interpolador|Add7~19             ; |Interpolador|Add7~19             ; out0             ;
+; |Interpolador|Add7~20             ; |Interpolador|Add7~20             ; out0             ;
+; |Interpolador|Add7~21             ; |Interpolador|Add7~21             ; out0             ;
+; |Interpolador|Add7~22             ; |Interpolador|Add7~22             ; out0             ;
+; |Interpolador|Add7~23             ; |Interpolador|Add7~23             ; out0             ;
+; |Interpolador|Add7~24             ; |Interpolador|Add7~24             ; out0             ;
+; |Interpolador|Add7~25             ; |Interpolador|Add7~25             ; out0             ;
+; |Interpolador|Add7~26             ; |Interpolador|Add7~26             ; out0             ;
+; |Interpolador|Add7~27             ; |Interpolador|Add7~27             ; out0             ;
+; |Interpolador|Add7~28             ; |Interpolador|Add7~28             ; out0             ;
+; |Interpolador|Add7~29             ; |Interpolador|Add7~29             ; out0             ;
+; |Interpolador|Add7~30             ; |Interpolador|Add7~30             ; out0             ;
+; |Interpolador|Add7~31             ; |Interpolador|Add7~31             ; out0             ;
+; |Interpolador|Add7~32             ; |Interpolador|Add7~32             ; out0             ;
+; |Interpolador|Add8~0              ; |Interpolador|Add8~0              ; out0             ;
+; |Interpolador|Add8~1              ; |Interpolador|Add8~1              ; out0             ;
+; |Interpolador|Add8~2              ; |Interpolador|Add8~2              ; out0             ;
+; |Interpolador|Add8~3              ; |Interpolador|Add8~3              ; out0             ;
+; |Interpolador|Add8~4              ; |Interpolador|Add8~4              ; out0             ;
+; |Interpolador|Add8~5              ; |Interpolador|Add8~5              ; out0             ;
+; |Interpolador|Add8~6              ; |Interpolador|Add8~6              ; out0             ;
+; |Interpolador|Add8~9              ; |Interpolador|Add8~9              ; out0             ;
+; |Interpolador|Add8~11             ; |Interpolador|Add8~11             ; out0             ;
+; |Interpolador|Add8~14             ; |Interpolador|Add8~14             ; out0             ;
+; |Interpolador|Add8~18             ; |Interpolador|Add8~18             ; out0             ;
+; |Interpolador|Add8~20             ; |Interpolador|Add8~20             ; out0             ;
+; |Interpolador|Add8~23             ; |Interpolador|Add8~23             ; out0             ;
+; |Interpolador|Add8~24             ; |Interpolador|Add8~24             ; out0             ;
+; |Interpolador|Add8~25             ; |Interpolador|Add8~25             ; out0             ;
+; |Interpolador|Add8~26             ; |Interpolador|Add8~26             ; out0             ;
+; |Interpolador|Add8~27             ; |Interpolador|Add8~27             ; out0             ;
+; |Interpolador|Add8~28             ; |Interpolador|Add8~28             ; out0             ;
+; |Interpolador|Add8~29             ; |Interpolador|Add8~29             ; out0             ;
+; |Interpolador|Add8~30             ; |Interpolador|Add8~30             ; out0             ;
+; |Interpolador|Add8~31             ; |Interpolador|Add8~31             ; out0             ;
+; |Interpolador|Add8~32             ; |Interpolador|Add8~32             ; out0             ;
+; |Interpolador|Add9~2              ; |Interpolador|Add9~2              ; out0             ;
+; |Interpolador|Add9~3              ; |Interpolador|Add9~3              ; out0             ;
+; |Interpolador|Add9~5              ; |Interpolador|Add9~5              ; out0             ;
+; |Interpolador|Add9~6              ; |Interpolador|Add9~6              ; out0             ;
+; |Interpolador|Add9~10             ; |Interpolador|Add9~10             ; out0             ;
+; |Interpolador|Add9~11             ; |Interpolador|Add9~11             ; out0             ;
+; |Interpolador|Add9~15             ; |Interpolador|Add9~15             ; out0             ;
+; |Interpolador|Add9~16             ; |Interpolador|Add9~16             ; out0             ;
+; |Interpolador|Add9~20             ; |Interpolador|Add9~20             ; out0             ;
+; |Interpolador|Add9~24             ; |Interpolador|Add9~24             ; out0             ;
+; |Interpolador|Add9~28             ; |Interpolador|Add9~28             ; out0             ;
+; |Interpolador|Add9~29             ; |Interpolador|Add9~29             ; out0             ;
+; |Interpolador|Add9~30             ; |Interpolador|Add9~30             ; out0             ;
+; |Interpolador|Add9~31             ; |Interpolador|Add9~31             ; out0             ;
+; |Interpolador|Add9~32             ; |Interpolador|Add9~32             ; out0             ;
+; |Interpolador|Add9~33             ; |Interpolador|Add9~33             ; out0             ;
+; |Interpolador|Add10~0             ; |Interpolador|Add10~0             ; out0             ;
+; |Interpolador|Add10~1             ; |Interpolador|Add10~1             ; out0             ;
+; |Interpolador|Add10~2             ; |Interpolador|Add10~2             ; out0             ;
+; |Interpolador|Add10~3             ; |Interpolador|Add10~3             ; out0             ;
+; |Interpolador|Add10~4             ; |Interpolador|Add10~4             ; out0             ;
+; |Interpolador|Add10~5             ; |Interpolador|Add10~5             ; out0             ;
+; |Interpolador|Add10~6             ; |Interpolador|Add10~6             ; out0             ;
+; |Interpolador|Add10~7             ; |Interpolador|Add10~7             ; out0             ;
+; |Interpolador|Add10~8             ; |Interpolador|Add10~8             ; out0             ;
+; |Interpolador|Add10~9             ; |Interpolador|Add10~9             ; out0             ;
+; |Interpolador|Add10~10            ; |Interpolador|Add10~10            ; out0             ;
+; |Interpolador|Add10~11            ; |Interpolador|Add10~11            ; out0             ;
+; |Interpolador|Add10~12            ; |Interpolador|Add10~12            ; out0             ;
+; |Interpolador|Add10~13            ; |Interpolador|Add10~13            ; out0             ;
+; |Interpolador|Add10~14            ; |Interpolador|Add10~14            ; out0             ;
+; |Interpolador|Add10~15            ; |Interpolador|Add10~15            ; out0             ;
+; |Interpolador|Add10~16            ; |Interpolador|Add10~16            ; out0             ;
+; |Interpolador|Add10~18            ; |Interpolador|Add10~18            ; out0             ;
+; |Interpolador|Add10~19            ; |Interpolador|Add10~19            ; out0             ;
+; |Interpolador|Add10~20            ; |Interpolador|Add10~20            ; out0             ;
+; |Interpolador|Add10~21            ; |Interpolador|Add10~21            ; out0             ;
+; |Interpolador|Add10~22            ; |Interpolador|Add10~22            ; out0             ;
+; |Interpolador|Add10~23            ; |Interpolador|Add10~23            ; out0             ;
+; |Interpolador|Add10~24            ; |Interpolador|Add10~24            ; out0             ;
+; |Interpolador|Add10~25            ; |Interpolador|Add10~25            ; out0             ;
+; |Interpolador|Add10~26            ; |Interpolador|Add10~26            ; out0             ;
+; |Interpolador|Add10~27            ; |Interpolador|Add10~27            ; out0             ;
+; |Interpolador|Add11~9             ; |Interpolador|Add11~9             ; out0             ;
+; |Interpolador|Add11~10            ; |Interpolador|Add11~10            ; out0             ;
+; |Interpolador|Add11~11            ; |Interpolador|Add11~11            ; out0             ;
+; |Interpolador|Add11~12            ; |Interpolador|Add11~12            ; out0             ;
+; |Interpolador|Add11~13            ; |Interpolador|Add11~13            ; out0             ;
+; |Interpolador|Add11~14            ; |Interpolador|Add11~14            ; out0             ;
+; |Interpolador|Add11~15            ; |Interpolador|Add11~15            ; out0             ;
+; |Interpolador|Add11~16            ; |Interpolador|Add11~16            ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 03 02:35:11 2018
+Info: Command: quartus_sim --simulation_results_format=VWF Interpolador -c Interpolador
+Info (324025): Using vector source file "D:/GitHub/PROVA-SDA/INTERPOALD/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "incioImagem" in design.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      19.92 %
+Info (328052): Number of transitions in simulation is 1725
+Info (324045): Vector file Interpolador.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4461 megabytes
+    Info: Processing ended: Mon Dec 03 02:35:12 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

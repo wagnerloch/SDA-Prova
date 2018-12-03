@@ -1,0 +1,1028 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/03/2018 01:35:20"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Interpolador
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Interpolador_vlg_sample_tst(
+	amostraIN0,
+	amostraIN1,
+	amostraIN2,
+	amostraIN3,
+	amostraIN4,
+	amostraIN5,
+	clock,
+	inicio,
+	sampler_tx
+);
+input [7:0] amostraIN0;
+input [7:0] amostraIN1;
+input [7:0] amostraIN2;
+input [7:0] amostraIN3;
+input [7:0] amostraIN4;
+input [7:0] amostraIN5;
+input  clock;
+input  inicio;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(amostraIN0 or amostraIN1 or amostraIN2 or amostraIN3 or amostraIN4 or amostraIN5 or clock or inicio)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Interpolador_vlg_check_tst (
+	amostraOUT,
+	amostraOUT2,
+	endereco,
+	incioImagem,
+	trocaLinha,
+	valido,
+	sampler_rx
+);
+input [7:0] amostraOUT;
+input [7:0] amostraOUT2;
+input [9:0] endereco;
+input  incioImagem;
+input  trocaLinha;
+input  valido;
+input sampler_rx;
+
+reg [7:0] amostraOUT_expected;
+reg [7:0] amostraOUT2_expected;
+reg [9:0] endereco_expected;
+reg  incioImagem_expected;
+reg  trocaLinha_expected;
+reg  valido_expected;
+
+reg [7:0] amostraOUT_prev;
+reg [7:0] amostraOUT2_prev;
+reg [9:0] endereco_prev;
+reg  incioImagem_prev;
+reg  trocaLinha_prev;
+reg  valido_prev;
+
+reg [7:0] amostraOUT_expected_prev;
+reg [7:0] amostraOUT2_expected_prev;
+reg [9:0] endereco_expected_prev;
+reg  incioImagem_expected_prev;
+reg  trocaLinha_expected_prev;
+reg  valido_expected_prev;
+
+reg [7:0] last_amostraOUT_exp;
+reg [7:0] last_amostraOUT2_exp;
+reg [9:0] last_endereco_exp;
+reg  last_incioImagem_exp;
+reg  last_trocaLinha_exp;
+reg  last_valido_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:6] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 6'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	amostraOUT_prev = amostraOUT;
+	amostraOUT2_prev = amostraOUT2;
+	endereco_prev = endereco;
+	incioImagem_prev = incioImagem;
+	trocaLinha_prev = trocaLinha;
+	valido_prev = valido;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	amostraOUT_expected_prev = amostraOUT_expected;
+	amostraOUT2_expected_prev = amostraOUT2_expected;
+	endereco_expected_prev = endereco_expected;
+	incioImagem_expected_prev = incioImagem_expected;
+	trocaLinha_expected_prev = trocaLinha_expected;
+	valido_expected_prev = valido_expected;
+end
+
+
+// expected amostraOUT[ 7 ]
+initial
+begin
+	amostraOUT_expected[7] = 1'bX;
+end 
+// expected amostraOUT[ 6 ]
+initial
+begin
+	amostraOUT_expected[6] = 1'bX;
+end 
+// expected amostraOUT[ 5 ]
+initial
+begin
+	amostraOUT_expected[5] = 1'bX;
+end 
+// expected amostraOUT[ 4 ]
+initial
+begin
+	amostraOUT_expected[4] = 1'bX;
+end 
+// expected amostraOUT[ 3 ]
+initial
+begin
+	amostraOUT_expected[3] = 1'bX;
+end 
+// expected amostraOUT[ 2 ]
+initial
+begin
+	amostraOUT_expected[2] = 1'bX;
+end 
+// expected amostraOUT[ 1 ]
+initial
+begin
+	amostraOUT_expected[1] = 1'bX;
+end 
+// expected amostraOUT[ 0 ]
+initial
+begin
+	amostraOUT_expected[0] = 1'bX;
+end 
+// expected amostraOUT2[ 7 ]
+initial
+begin
+	amostraOUT2_expected[7] = 1'bX;
+end 
+// expected amostraOUT2[ 6 ]
+initial
+begin
+	amostraOUT2_expected[6] = 1'bX;
+end 
+// expected amostraOUT2[ 5 ]
+initial
+begin
+	amostraOUT2_expected[5] = 1'bX;
+end 
+// expected amostraOUT2[ 4 ]
+initial
+begin
+	amostraOUT2_expected[4] = 1'bX;
+end 
+// expected amostraOUT2[ 3 ]
+initial
+begin
+	amostraOUT2_expected[3] = 1'bX;
+end 
+// expected amostraOUT2[ 2 ]
+initial
+begin
+	amostraOUT2_expected[2] = 1'bX;
+end 
+// expected amostraOUT2[ 1 ]
+initial
+begin
+	amostraOUT2_expected[1] = 1'bX;
+end 
+// expected amostraOUT2[ 0 ]
+initial
+begin
+	amostraOUT2_expected[0] = 1'bX;
+end 
+// expected endereco[ 9 ]
+initial
+begin
+	endereco_expected[9] = 1'bX;
+end 
+// expected endereco[ 8 ]
+initial
+begin
+	endereco_expected[8] = 1'bX;
+end 
+// expected endereco[ 7 ]
+initial
+begin
+	endereco_expected[7] = 1'bX;
+end 
+// expected endereco[ 6 ]
+initial
+begin
+	endereco_expected[6] = 1'bX;
+end 
+// expected endereco[ 5 ]
+initial
+begin
+	endereco_expected[5] = 1'bX;
+end 
+// expected endereco[ 4 ]
+initial
+begin
+	endereco_expected[4] = 1'bX;
+end 
+// expected endereco[ 3 ]
+initial
+begin
+	endereco_expected[3] = 1'bX;
+end 
+// expected endereco[ 2 ]
+initial
+begin
+	endereco_expected[2] = 1'bX;
+end 
+// expected endereco[ 1 ]
+initial
+begin
+	endereco_expected[1] = 1'bX;
+end 
+// expected endereco[ 0 ]
+initial
+begin
+	endereco_expected[0] = 1'bX;
+end 
+
+// expected incioImagem
+initial
+begin
+	incioImagem_expected = 1'bX;
+end 
+
+// expected trocaLinha
+initial
+begin
+	trocaLinha_expected = 1'bX;
+end 
+
+// expected valido
+initial
+begin
+	valido_expected = 1'bX;
+end 
+// generate trigger
+always @(amostraOUT_expected or amostraOUT or amostraOUT2_expected or amostraOUT2 or endereco_expected or endereco or incioImagem_expected or incioImagem or trocaLinha_expected or trocaLinha or valido_expected or valido)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected amostraOUT = %b | expected amostraOUT2 = %b | expected endereco = %b | expected incioImagem = %b | expected trocaLinha = %b | expected valido = %b | ",amostraOUT_expected_prev,amostraOUT2_expected_prev,endereco_expected_prev,incioImagem_expected_prev,trocaLinha_expected_prev,valido_expected_prev);
+	$display("| real amostraOUT = %b | real amostraOUT2 = %b | real endereco = %b | real incioImagem = %b | real trocaLinha = %b | real valido = %b | ",amostraOUT_prev,amostraOUT2_prev,endereco_prev,incioImagem_prev,trocaLinha_prev,valido_prev);
+`endif
+	if (
+		( amostraOUT_expected_prev[0] !== 1'bx ) && ( amostraOUT_prev[0] !== amostraOUT_expected_prev[0] )
+		&& ((amostraOUT_expected_prev[0] !== last_amostraOUT_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[0] = amostraOUT_expected_prev[0];
+	end
+	if (
+		( amostraOUT_expected_prev[1] !== 1'bx ) && ( amostraOUT_prev[1] !== amostraOUT_expected_prev[1] )
+		&& ((amostraOUT_expected_prev[1] !== last_amostraOUT_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[1] = amostraOUT_expected_prev[1];
+	end
+	if (
+		( amostraOUT_expected_prev[2] !== 1'bx ) && ( amostraOUT_prev[2] !== amostraOUT_expected_prev[2] )
+		&& ((amostraOUT_expected_prev[2] !== last_amostraOUT_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[2] = amostraOUT_expected_prev[2];
+	end
+	if (
+		( amostraOUT_expected_prev[3] !== 1'bx ) && ( amostraOUT_prev[3] !== amostraOUT_expected_prev[3] )
+		&& ((amostraOUT_expected_prev[3] !== last_amostraOUT_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[3] = amostraOUT_expected_prev[3];
+	end
+	if (
+		( amostraOUT_expected_prev[4] !== 1'bx ) && ( amostraOUT_prev[4] !== amostraOUT_expected_prev[4] )
+		&& ((amostraOUT_expected_prev[4] !== last_amostraOUT_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[4] = amostraOUT_expected_prev[4];
+	end
+	if (
+		( amostraOUT_expected_prev[5] !== 1'bx ) && ( amostraOUT_prev[5] !== amostraOUT_expected_prev[5] )
+		&& ((amostraOUT_expected_prev[5] !== last_amostraOUT_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[5] = amostraOUT_expected_prev[5];
+	end
+	if (
+		( amostraOUT_expected_prev[6] !== 1'bx ) && ( amostraOUT_prev[6] !== amostraOUT_expected_prev[6] )
+		&& ((amostraOUT_expected_prev[6] !== last_amostraOUT_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[6] = amostraOUT_expected_prev[6];
+	end
+	if (
+		( amostraOUT_expected_prev[7] !== 1'bx ) && ( amostraOUT_prev[7] !== amostraOUT_expected_prev[7] )
+		&& ((amostraOUT_expected_prev[7] !== last_amostraOUT_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT_expected_prev);
+		$display ("     Real value = %b", amostraOUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_amostraOUT_exp[7] = amostraOUT_expected_prev[7];
+	end
+	if (
+		( amostraOUT2_expected_prev[0] !== 1'bx ) && ( amostraOUT2_prev[0] !== amostraOUT2_expected_prev[0] )
+		&& ((amostraOUT2_expected_prev[0] !== last_amostraOUT2_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[0] = amostraOUT2_expected_prev[0];
+	end
+	if (
+		( amostraOUT2_expected_prev[1] !== 1'bx ) && ( amostraOUT2_prev[1] !== amostraOUT2_expected_prev[1] )
+		&& ((amostraOUT2_expected_prev[1] !== last_amostraOUT2_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[1] = amostraOUT2_expected_prev[1];
+	end
+	if (
+		( amostraOUT2_expected_prev[2] !== 1'bx ) && ( amostraOUT2_prev[2] !== amostraOUT2_expected_prev[2] )
+		&& ((amostraOUT2_expected_prev[2] !== last_amostraOUT2_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[2] = amostraOUT2_expected_prev[2];
+	end
+	if (
+		( amostraOUT2_expected_prev[3] !== 1'bx ) && ( amostraOUT2_prev[3] !== amostraOUT2_expected_prev[3] )
+		&& ((amostraOUT2_expected_prev[3] !== last_amostraOUT2_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[3] = amostraOUT2_expected_prev[3];
+	end
+	if (
+		( amostraOUT2_expected_prev[4] !== 1'bx ) && ( amostraOUT2_prev[4] !== amostraOUT2_expected_prev[4] )
+		&& ((amostraOUT2_expected_prev[4] !== last_amostraOUT2_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[4] = amostraOUT2_expected_prev[4];
+	end
+	if (
+		( amostraOUT2_expected_prev[5] !== 1'bx ) && ( amostraOUT2_prev[5] !== amostraOUT2_expected_prev[5] )
+		&& ((amostraOUT2_expected_prev[5] !== last_amostraOUT2_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[5] = amostraOUT2_expected_prev[5];
+	end
+	if (
+		( amostraOUT2_expected_prev[6] !== 1'bx ) && ( amostraOUT2_prev[6] !== amostraOUT2_expected_prev[6] )
+		&& ((amostraOUT2_expected_prev[6] !== last_amostraOUT2_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[6] = amostraOUT2_expected_prev[6];
+	end
+	if (
+		( amostraOUT2_expected_prev[7] !== 1'bx ) && ( amostraOUT2_prev[7] !== amostraOUT2_expected_prev[7] )
+		&& ((amostraOUT2_expected_prev[7] !== last_amostraOUT2_exp[7]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port amostraOUT2[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", amostraOUT2_expected_prev);
+		$display ("     Real value = %b", amostraOUT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_amostraOUT2_exp[7] = amostraOUT2_expected_prev[7];
+	end
+	if (
+		( endereco_expected_prev[0] !== 1'bx ) && ( endereco_prev[0] !== endereco_expected_prev[0] )
+		&& ((endereco_expected_prev[0] !== last_endereco_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[0] = endereco_expected_prev[0];
+	end
+	if (
+		( endereco_expected_prev[1] !== 1'bx ) && ( endereco_prev[1] !== endereco_expected_prev[1] )
+		&& ((endereco_expected_prev[1] !== last_endereco_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[1] = endereco_expected_prev[1];
+	end
+	if (
+		( endereco_expected_prev[2] !== 1'bx ) && ( endereco_prev[2] !== endereco_expected_prev[2] )
+		&& ((endereco_expected_prev[2] !== last_endereco_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[2] = endereco_expected_prev[2];
+	end
+	if (
+		( endereco_expected_prev[3] !== 1'bx ) && ( endereco_prev[3] !== endereco_expected_prev[3] )
+		&& ((endereco_expected_prev[3] !== last_endereco_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[3] = endereco_expected_prev[3];
+	end
+	if (
+		( endereco_expected_prev[4] !== 1'bx ) && ( endereco_prev[4] !== endereco_expected_prev[4] )
+		&& ((endereco_expected_prev[4] !== last_endereco_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[4] = endereco_expected_prev[4];
+	end
+	if (
+		( endereco_expected_prev[5] !== 1'bx ) && ( endereco_prev[5] !== endereco_expected_prev[5] )
+		&& ((endereco_expected_prev[5] !== last_endereco_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[5] = endereco_expected_prev[5];
+	end
+	if (
+		( endereco_expected_prev[6] !== 1'bx ) && ( endereco_prev[6] !== endereco_expected_prev[6] )
+		&& ((endereco_expected_prev[6] !== last_endereco_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[6] = endereco_expected_prev[6];
+	end
+	if (
+		( endereco_expected_prev[7] !== 1'bx ) && ( endereco_prev[7] !== endereco_expected_prev[7] )
+		&& ((endereco_expected_prev[7] !== last_endereco_exp[7]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[7] = endereco_expected_prev[7];
+	end
+	if (
+		( endereco_expected_prev[8] !== 1'bx ) && ( endereco_prev[8] !== endereco_expected_prev[8] )
+		&& ((endereco_expected_prev[8] !== last_endereco_exp[8]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[8] = endereco_expected_prev[8];
+	end
+	if (
+		( endereco_expected_prev[9] !== 1'bx ) && ( endereco_prev[9] !== endereco_expected_prev[9] )
+		&& ((endereco_expected_prev[9] !== last_endereco_exp[9]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port endereco[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", endereco_expected_prev);
+		$display ("     Real value = %b", endereco_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_endereco_exp[9] = endereco_expected_prev[9];
+	end
+	if (
+		( incioImagem_expected_prev !== 1'bx ) && ( incioImagem_prev !== incioImagem_expected_prev )
+		&& ((incioImagem_expected_prev !== last_incioImagem_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port incioImagem :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", incioImagem_expected_prev);
+		$display ("     Real value = %b", incioImagem_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_incioImagem_exp = incioImagem_expected_prev;
+	end
+	if (
+		( trocaLinha_expected_prev !== 1'bx ) && ( trocaLinha_prev !== trocaLinha_expected_prev )
+		&& ((trocaLinha_expected_prev !== last_trocaLinha_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port trocaLinha :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", trocaLinha_expected_prev);
+		$display ("     Real value = %b", trocaLinha_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_trocaLinha_exp = trocaLinha_expected_prev;
+	end
+	if (
+		( valido_expected_prev !== 1'bx ) && ( valido_prev !== valido_expected_prev )
+		&& ((valido_expected_prev !== last_valido_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port valido :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", valido_expected_prev);
+		$display ("     Real value = %b", valido_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_valido_exp = valido_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Interpolador_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [7:0] amostraIN0;
+reg [7:0] amostraIN1;
+reg [7:0] amostraIN2;
+reg [7:0] amostraIN3;
+reg [7:0] amostraIN4;
+reg [7:0] amostraIN5;
+reg clock;
+reg inicio;
+// wires                                               
+wire [7:0] amostraOUT;
+wire [7:0] amostraOUT2;
+wire [9:0] endereco;
+wire incioImagem;
+wire trocaLinha;
+wire valido;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Interpolador i1 (
+// port map - connection between master ports and signals/registers   
+	.amostraIN0(amostraIN0),
+	.amostraIN1(amostraIN1),
+	.amostraIN2(amostraIN2),
+	.amostraIN3(amostraIN3),
+	.amostraIN4(amostraIN4),
+	.amostraIN5(amostraIN5),
+	.amostraOUT(amostraOUT),
+	.amostraOUT2(amostraOUT2),
+	.clock(clock),
+	.endereco(endereco),
+	.incioImagem(incioImagem),
+	.inicio(inicio),
+	.trocaLinha(trocaLinha),
+	.valido(valido)
+);
+// amostraIN0[ 7 ]
+initial
+begin
+	amostraIN0[7] = 1'b0;
+end 
+// amostraIN0[ 6 ]
+initial
+begin
+	amostraIN0[6] = 1'b0;
+end 
+// amostraIN0[ 5 ]
+initial
+begin
+	amostraIN0[5] = 1'b0;
+end 
+// amostraIN0[ 4 ]
+initial
+begin
+	amostraIN0[4] = 1'b0;
+end 
+// amostraIN0[ 3 ]
+initial
+begin
+	amostraIN0[3] = 1'b1;
+end 
+// amostraIN0[ 2 ]
+initial
+begin
+	amostraIN0[2] = 1'b0;
+end 
+// amostraIN0[ 1 ]
+initial
+begin
+	amostraIN0[1] = 1'b1;
+end 
+// amostraIN0[ 0 ]
+initial
+begin
+	amostraIN0[0] = 1'b0;
+end 
+// amostraIN1[ 7 ]
+initial
+begin
+	amostraIN1[7] = 1'b0;
+end 
+// amostraIN1[ 6 ]
+initial
+begin
+	amostraIN1[6] = 1'b0;
+end 
+// amostraIN1[ 5 ]
+initial
+begin
+	amostraIN1[5] = 1'b0;
+end 
+// amostraIN1[ 4 ]
+initial
+begin
+	amostraIN1[4] = 1'b0;
+end 
+// amostraIN1[ 3 ]
+initial
+begin
+	amostraIN1[3] = 1'b0;
+end 
+// amostraIN1[ 2 ]
+initial
+begin
+	amostraIN1[2] = 1'b0;
+end 
+// amostraIN1[ 1 ]
+initial
+begin
+	amostraIN1[1] = 1'b0;
+end 
+// amostraIN1[ 0 ]
+initial
+begin
+	amostraIN1[0] = 1'b0;
+end 
+// amostraIN2[ 7 ]
+initial
+begin
+	amostraIN2[7] = 1'b0;
+end 
+// amostraIN2[ 6 ]
+initial
+begin
+	amostraIN2[6] = 1'b0;
+end 
+// amostraIN2[ 5 ]
+initial
+begin
+	amostraIN2[5] = 1'b0;
+end 
+// amostraIN2[ 4 ]
+initial
+begin
+	amostraIN2[4] = 1'b0;
+end 
+// amostraIN2[ 3 ]
+initial
+begin
+	amostraIN2[3] = 1'b0;
+end 
+// amostraIN2[ 2 ]
+initial
+begin
+	amostraIN2[2] = 1'b0;
+end 
+// amostraIN2[ 1 ]
+initial
+begin
+	amostraIN2[1] = 1'b0;
+end 
+// amostraIN2[ 0 ]
+initial
+begin
+	amostraIN2[0] = 1'b0;
+end 
+// amostraIN3[ 7 ]
+initial
+begin
+	amostraIN3[7] = 1'b0;
+end 
+// amostraIN3[ 6 ]
+initial
+begin
+	amostraIN3[6] = 1'b0;
+end 
+// amostraIN3[ 5 ]
+initial
+begin
+	amostraIN3[5] = 1'b0;
+end 
+// amostraIN3[ 4 ]
+initial
+begin
+	amostraIN3[4] = 1'b0;
+end 
+// amostraIN3[ 3 ]
+initial
+begin
+	amostraIN3[3] = 1'b0;
+end 
+// amostraIN3[ 2 ]
+initial
+begin
+	amostraIN3[2] = 1'b0;
+end 
+// amostraIN3[ 1 ]
+initial
+begin
+	amostraIN3[1] = 1'b0;
+end 
+// amostraIN3[ 0 ]
+initial
+begin
+	amostraIN3[0] = 1'b0;
+end 
+// amostraIN4[ 7 ]
+initial
+begin
+	amostraIN4[7] = 1'b0;
+end 
+// amostraIN4[ 6 ]
+initial
+begin
+	amostraIN4[6] = 1'b0;
+end 
+// amostraIN4[ 5 ]
+initial
+begin
+	amostraIN4[5] = 1'b0;
+end 
+// amostraIN4[ 4 ]
+initial
+begin
+	amostraIN4[4] = 1'b0;
+end 
+// amostraIN4[ 3 ]
+initial
+begin
+	amostraIN4[3] = 1'b0;
+end 
+// amostraIN4[ 2 ]
+initial
+begin
+	amostraIN4[2] = 1'b0;
+end 
+// amostraIN4[ 1 ]
+initial
+begin
+	amostraIN4[1] = 1'b0;
+end 
+// amostraIN4[ 0 ]
+initial
+begin
+	amostraIN4[0] = 1'b0;
+end 
+// amostraIN5[ 7 ]
+initial
+begin
+	amostraIN5[7] = 1'b0;
+end 
+// amostraIN5[ 6 ]
+initial
+begin
+	amostraIN5[6] = 1'b0;
+end 
+// amostraIN5[ 5 ]
+initial
+begin
+	amostraIN5[5] = 1'b0;
+end 
+// amostraIN5[ 4 ]
+initial
+begin
+	amostraIN5[4] = 1'b0;
+end 
+// amostraIN5[ 3 ]
+initial
+begin
+	amostraIN5[3] = 1'b0;
+end 
+// amostraIN5[ 2 ]
+initial
+begin
+	amostraIN5[2] = 1'b0;
+end 
+// amostraIN5[ 1 ]
+initial
+begin
+	amostraIN5[1] = 1'b0;
+end 
+// amostraIN5[ 0 ]
+initial
+begin
+	amostraIN5[0] = 1'b0;
+end 
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #5000 1'b1;
+	#5000;
+end 
+
+// inicio
+initial
+begin
+	inicio = 1'b0;
+end 
+
+Interpolador_vlg_sample_tst tb_sample (
+	.amostraIN0(amostraIN0),
+	.amostraIN1(amostraIN1),
+	.amostraIN2(amostraIN2),
+	.amostraIN3(amostraIN3),
+	.amostraIN4(amostraIN4),
+	.amostraIN5(amostraIN5),
+	.clock(clock),
+	.inicio(inicio),
+	.sampler_tx(sampler)
+);
+
+Interpolador_vlg_check_tst tb_out(
+	.amostraOUT(amostraOUT),
+	.amostraOUT2(amostraOUT2),
+	.endereco(endereco),
+	.incioImagem(incioImagem),
+	.trocaLinha(trocaLinha),
+	.valido(valido),
+	.sampler_rx(sampler)
+);
+endmodule
+
