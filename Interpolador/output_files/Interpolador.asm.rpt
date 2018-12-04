@@ -1,5 +1,5 @@
 Assembler report for Interpolador
-Mon Dec 03 16:36:18 2018
+Tue Dec 04 01:08:36 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/output_files/Interpolador.sof
-  6. Assembler Device Options: C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/output_files/Interpolador.pof
+  5. Assembler Device Options: D:/GitHub/SDA-Prova-master/Interpolador/output_files/Interpolador.sof
+  6. Assembler Device Options: D:/GitHub/SDA-Prova-master/Interpolador/output_files/Interpolador.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Dec 03 16:36:18 2018 ;
+; Assembler Status      ; Successful - Tue Dec 04 01:08:36 2018 ;
 ; Revision Name         ; Interpolador                          ;
 ; Top-level Entity Name ; Interpolador                          ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                            ;
-+--------------------------------------------------------------------------------------+
-; File Name                                                                            ;
-+--------------------------------------------------------------------------------------+
-; C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/output_files/Interpolador.sof ;
-; C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/output_files/Interpolador.pof ;
-+--------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Assembler Generated Files                                             ;
++-----------------------------------------------------------------------+
+; File Name                                                             ;
++-----------------------------------------------------------------------+
+; D:/GitHub/SDA-Prova-master/Interpolador/output_files/Interpolador.sof ;
+; D:/GitHub/SDA-Prova-master/Interpolador/output_files/Interpolador.pof ;
++-----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/output_files/Interpolador.sof ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                       ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Device         ; EP2C5F256C6                                                                                   ;
-; JTAG usercode  ; 0x0009112F                                                                                    ;
-; Checksum       ; 0x0009112F                                                                                    ;
-+----------------+-----------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/GitHub/SDA-Prova-master/Interpolador/output_files/Interpolador.sof ;
++----------------+--------------------------------------------------------------------------------+
+; Option         ; Setting                                                                        ;
++----------------+--------------------------------------------------------------------------------+
+; Device         ; EP2C5F256C6                                                                    ;
+; JTAG usercode  ; 0x0009112F                                                                     ;
+; Checksum       ; 0x0009112F                                                                     ;
++----------------+--------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/output_files/Interpolador.pof ;
-+--------------------+-------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                   ;
-+--------------------+-------------------------------------------------------------------------------------------+
-; Device             ; EPCS4                                                                                     ;
-; JTAG usercode      ; 0x00000000                                                                                ;
-; Checksum           ; 0x074F3C37                                                                                ;
-; Compression Ratio  ; 3                                                                                         ;
-+--------------------+-------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/GitHub/SDA-Prova-master/Interpolador/output_files/Interpolador.pof ;
++--------------------+----------------------------------------------------------------------------+
+; Option             ; Setting                                                                    ;
++--------------------+----------------------------------------------------------------------------+
+; Device             ; EPCS4                                                                      ;
+; JTAG usercode      ; 0x00000000                                                                 ;
+; Checksum           ; 0x074F3C37                                                                 ;
+; Compression Ratio  ; 3                                                                          ;
++--------------------+----------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 03 16:36:18 2018
+    Info: Processing started: Tue Dec 04 01:08:35 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Interpolador -c Interpolador
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4570 megabytes
-    Info: Processing ended: Mon Dec 03 16:36:18 2018
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Tue Dec 04 01:08:36 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

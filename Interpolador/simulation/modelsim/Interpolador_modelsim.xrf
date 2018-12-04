@@ -1,8 +1,8 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/newtype.vhd
-source_file = 1, C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/Interpolador.vhd
-source_file = 1, C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/Waveform.vwf
-source_file = 1, C:/Users/Aluno/Downloads/SDA-Prova-master/Interpolador/db/Interpolador.cbx.xml
+source_file = 1, newtype.vhd
+source_file = 1, D:/GitHub/SDA-Prova-master/Interpolador/Interpolador.vhd
+source_file = 1, D:/GitHub/SDA-Prova-master/Interpolador/Waveform.vwf
+source_file = 1, D:/GitHub/SDA-Prova-master/Interpolador/db/Interpolador.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd

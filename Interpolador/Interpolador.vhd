@@ -13,7 +13,6 @@ ENTITY Interpolador IS
 			amostraIN5					:	in STD_LOGIC_VECTOR (7 DOWNTO 0);
 			amostraOUT, amostraOUT2		:	out STD_LOGIC_VECTOR (7 DOWNTO 0);
 			endereco						:	out STD_LOGIC_VECTOR (9 DOWNTO 0);
-			--TESTE	: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 			trocaLinha, inicioImagem, valido	:	out STD_LOGIC 
 			);
 END Interpolador;
@@ -67,8 +66,6 @@ begin
 					amostraOUT2 <= aux3;
 					valido <= '1';
 					auxEndereco <= auxEndereco + 1;
-					--aux4 <= aux4 - 10;
-					--TESTE <= aux4;
 				else
 					valido <= '1';
 					inicioImagem <= '1';
