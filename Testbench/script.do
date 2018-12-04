@@ -24,4 +24,4 @@ sim:/Upsampling_vhd_tst/sampleOut2 \
 sim:/Upsampling_vhd_tst/start \
 sim:/Upsampling_vhd_tst/valido
 
-run 100ps
+run 500ps
